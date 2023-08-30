@@ -1,38 +1,51 @@
 .App {
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* <------------------Navbar Start---------------------> */
+#nav-menu{
+  color: #8739F9;
+  background: #0F1624;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active-scroll{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: #C651CD 0px 4px 4px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-icon{
+  font-size: 20px;
+  transition: font-size 0.3s ease-in-out;
+}
+.nav-icon:hover{
+  cursor: pointer;
+  color: #F74343;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+#nav-menu .home,
+#nav-menu .about,
+#nav-menu .skills,
+#nav-menu .projects,
+#nav-menu .contact {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  color: #8739F9;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nav-menu .home:hover,
+#nav-menu .about:hover,
+#nav-menu .skills:hover,
+#nav-menu .projects:hover,
+#nav-menu .contact:hover {
+  color: #F74343;
+  transform: scale(1.3);
 }
+
+/* <------------------Navbar End---------------------> */

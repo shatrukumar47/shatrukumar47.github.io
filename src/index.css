@@ -1,13 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Caramel&family=Dancing+Script:wght@700&family=Play&family=Rubik+Gemstones&family=Rubik+Storm&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.avatar {
+  --border-color: #8739F9;
+  /* --avatar-size: 350px;
+  height: var(--avatar-size);
+  width: var(--avatar-size); */
+  border: 4px solid var(--border-color);
+  padding: 6px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+ @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--avatar-size) * 0.95);
+  height: calc(var(--avatar-size) * 0.95);
+  border: 4px solid transparent;
+  border-top-color: #C651CD;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%, -50%);
+  animation: spin 3s linear infinite;
+}
+
+
+/* .avatar {
+  --border-color: #4255d4;
+  --background-color: #212752;
+  --avatar-size: 350px;
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  border: 4px solid var(--border-color);
+  padding: 6px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgb(247, 67, 67) -7px 0px 13px, rgb(247, 67, 67) 0px -10px 10px,
+    rgb(247, 67, 67) 7px 6px 24px, rgb(247, 67, 67) 0px 11px 13px,
+    rgb(247, 67, 67) 6px 1px 5px;
+  animation: bounce 1s infinite;
+}
+
+.avatar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5); 
+  top: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.avatar img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+} */
+
+
