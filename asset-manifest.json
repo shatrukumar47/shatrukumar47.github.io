@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.a662364d.js",
-    "static/js/787.1f11dfe9.chunk.js": "/static/js/787.1f11dfe9.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/static/css/main.8e13e923.css",
+    "main.js": "/static/js/main.aa561d82.js",
+    "static/media/porfolioPic.png": "/static/media/porfolioPic.59d0a0027e0fecaa6e72.png",
+    "static/media/aboutAnime.gif": "/static/media/aboutAnime.37ef1e1a376ff1b6c967.gif",
+    "static/media/FitQuest.png": "/static/media/FitQuest.4e6d47d1be61bc101f24.png",
+    "static/media/netlifyIcon.png": "/static/media/netlifyIcon.d0445ea89ff9aaa07ed7.png",
+    "static/media/node-icon.svg": "/static/media/node-icon.cc3d45a160579a330a5c17cc2c8f1407.svg",
+    "static/media/typescript-icon.svg": "/static/media/typescript-icon.f3bc0fd998dea6b1266965436af97a49.svg",
+    "static/media/react-icon.svg": "/static/media/react-icon.a010f287ea79ad0673b610a223faa951.svg",
+    "static/media/phone-icon.svg": "/static/media/phone-icon.fc7195139d684fa2f6bb03b8b9816095.svg",
+    "static/media/github.svg": "/static/media/github.d344c0fc70ddfb6de253ddc40adcb086.svg",
+    "static/media/email-icon.svg": "/static/media/email-icon.a5dd245e834641e729e77e40309039c4.svg",
+    "static/media/html-icon.svg": "/static/media/html-icon.185baee7db74b83bf22eec6a6def7644.svg",
+    "static/media/css-icon.svg": "/static/media/css-icon.212d777ae2db63edb235490d487dc292.svg",
+    "static/media/vscode-icon.svg": "/static/media/vscode-icon.7bfadaaeba8770093f98a79aa2c77d41.svg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.a662364d.js.map": "/static/js/main.a662364d.js.map",
-    "787.1f11dfe9.chunk.js.map": "/static/js/787.1f11dfe9.chunk.js.map"
+    "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.4f00d78f67f451cf01173f7418aa186f.svg",
+    "static/media/js-icon.svg": "/static/media/js-icon.2d25723e91c8a9e057ae447ae6a73ecb.svg",
+    "main.8e13e923.css.map": "/static/css/main.8e13e923.css.map",
+    "main.aa561d82.js.map": "/static/js/main.aa561d82.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.a662364d.js"
+    "static/css/main.8e13e923.css",
+    "static/js/main.aa561d82.js"
   ]
 }
