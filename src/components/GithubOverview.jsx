@@ -28,10 +28,10 @@ const GithubOverview = () => {
           }}
         >
           <Box
-            width={{base:"100%", md:"70%", lg:"70%"}}
+            width={{ base: "100%", md: "70%", lg: "70%" }}
             m={"auto"}
             color={"white"}
-            padding={{base:"10px", md:"20px", lg:"20px"}}
+            padding={{ base: "10px", md: "20px", lg: "20px" }}
             className="react-activity-calendar"
           >
             <GitHubCalendar username="shatrukumar47" />
@@ -41,8 +41,8 @@ const GithubOverview = () => {
           w={"100%"}
           m={"auto"}
           display={"flex"}
-          flexDirection={{base:"column", md: "column", lg: "row"}}
-          gap={{base:"30px", md: "30px", lg: "0px"}}
+          flexDirection={{ base: "column", md: "column", lg: "row" }}
+          gap={{ base: "30px", md: "30px", lg: "0px" }}
           justifyContent={"space-around"}
           alignItems={"center"}
         >
@@ -61,7 +61,7 @@ const GithubOverview = () => {
 
           <Image
             src="https://github-readme-streak-stats.herokuapp.com/?user=shatrukumar47&theme=dark&hide_border=false"
-            id="github-stats-card"
+            id="github-streak-stats"
             boxShadow={
               "rgb(255, 255, 255) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
             }
@@ -73,7 +73,7 @@ const GithubOverview = () => {
 
           <Image
             src="https://github-readme-stats.vercel.app/api?username=shatrukumar47&theme=dark&hide_border=false&include_all_commits=false&count_private=false"
-            id="github-streak-stats"
+            id="github-stats-card"
             boxShadow={
               "rgb(255, 255, 255) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
             }
