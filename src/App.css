@@ -6,7 +6,7 @@
 
 /* <------------------Navbar Start---------------------> */
 #nav-menu{
-  color: #8739F9;
+  color: #00FFFF;
   background: #0F1624;
 }
 
@@ -34,7 +34,7 @@
 #nav-menu .contact {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  color: #8739F9;
+  color: #00FFFF;
   font-size: 16px;
   text-decoration: none;
 }

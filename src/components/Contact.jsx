@@ -42,8 +42,33 @@ const Contact = () => {
   //   <a href="#" id='contact-phone'>Phone</a>
   //   <a href="#" id='contact-email'>Email</a>
   // </div>
+
+  //Linkedin
+  const handleLinkedin = () => {
+    window.open(
+      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
+      "_blank"
+    );
+  };
+
+  //handleGithub
+  const handleGithub = () => {
+    window.open("https://github.com/shatrukumar47", "_blank");
+  };
+
+  //handleEmail
+  const handleEmail = () => {
+    console.log("Email");
+  };
+
+  //handlePhone
+  const handlePhone = ()=>{
+    console.log("Phone")
+  }
+
   return (
     <Container
+      id="contact"
       bg={"#1E1842"}
       maxW="full"
       mt={0}
@@ -94,36 +119,44 @@ const Contact = () => {
                     color={"white"}
                   >
                     <IconButton
+                      id="contact-linkedin"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}
                       isRound={true}
                       _hover={{ bg: "#F74343", color: "white" }}
                       icon={<FaLinkedinIn size="28px" />}
+                      onClick={handleLinkedin}
                     />
                     <IconButton
+                      id="contact-github"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}
                       isRound={true}
                       _hover={{ bg: "#F74343", color: "white" }}
                       icon={<BsGithub size="28px" />}
+                      onClick={handleGithub}
                     />
                     <IconButton
+                      id="contact-phone"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}
                       isRound={true}
                       _hover={{ bg: "#F74343", color: "white" }}
                       icon={<FaPhoneAlt size="28px" />}
+                      onClick={handlePhone}
                     />
                     <IconButton
+                      id="contact-email"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}
                       isRound={true}
                       _hover={{ bg: "#F74343", color: "white" }}
                       icon={<FaEnvelope size="28px" />}
+                      onClick={handleEmail}
                     />
                   </HStack>
                 </Box>

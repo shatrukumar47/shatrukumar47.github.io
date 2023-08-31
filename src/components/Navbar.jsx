@@ -41,6 +41,30 @@ const Navbar = () => {
     });
   }, []);
 
+  //Linkedin
+  const handleLinkedin = () => {
+    window.open(
+      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
+      "_blank"
+    );
+  };
+
+  //handleGithub
+  const handleGithub = () => {
+    window.open("https://github.com/shatrukumar47", "_blank");
+  };
+
+  //handleResumeDownload
+  const handleResume = () => {
+    const resumeFilename = "Shatrughan-Kumar-Resume.pdf"; // Make sure this matches the filename in the public folder
+    const resumeURL =
+      process.env.PUBLIC_URL + "/Resume/" + "Shatrughan-Kumar-Resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumeURL;
+    link.download = resumeFilename;
+    link.click();
+  };
+
   return (
     <Box
       id="nav-menu"
@@ -48,7 +72,12 @@ const Navbar = () => {
       style={{ position: "sticky", top: 0, zIndex: 999 }}
       className={scroll ? "active-scroll" : ""}
     >
-      <Container maxW={"8xl"}>
+      <Container
+        maxW={"8xl"}
+        fontWeight={"bold"}
+        letterSpacing={"1px"}
+        color={"#00FFFF"}
+      >
         <HStack
           justify="space-between"
           padding={"15px"}
@@ -64,8 +93,8 @@ const Navbar = () => {
             spacing={"15px"}
             marginLeft={{ base: "30px", md: "30px", lg: "20px" }}
           >
-            <FaLinkedinIn className="nav-icon" />
-            <FaGithub className="nav-icon" />
+            <FaLinkedinIn className="nav-icon" onClick={handleLinkedin} />
+            <FaGithub className="nav-icon" onClick={handleGithub} />
           </HStack>
           <HStack
             display={{ base: "flex", md: "flex", lg: "flex" }}
@@ -118,6 +147,7 @@ const Navbar = () => {
                 borderRadius: "20px",
               }}
               rightIcon={<FaDownload />}
+              onClick={handleResume}
             >
               Resume
             </Button>

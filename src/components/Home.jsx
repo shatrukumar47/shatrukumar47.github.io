@@ -5,15 +5,22 @@ import {
   Flex,
   HStack,
   Heading,
+  IconButton,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import portfolioPic from "./porfolioPic.png";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { FaDownload, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaDownload,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedinIn,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
 
 const Home = () => {
   const typedRef = useRef(null);
@@ -33,6 +40,29 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
+
+   //Linkedin
+   const handleLinkedin = () => {
+    window.open(
+      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
+      "_blank"
+    );
+  };
+
+  //handleGithub
+  const handleGithub = () => {
+    window.open("https://github.com/shatrukumar47", "_blank");
+  };
+
+  //handleEmail
+  const handleEmail = ()=>{
+    console.log("Email")
+  }
+
+  //handleResume
+  const handleResume = ()=>{
+    window.open("https://drive.google.com/file/d/1sMl6Y29p9labjv5Z55Dep-PFPFG3Opch/view?usp=sharing", "_blank");
+  }
 
   return (
     <Box id="home" bg={"#0F1624"} color={"white"}>
@@ -92,6 +122,56 @@ const Home = () => {
               within teams.
             </Text>
             <Stack alignItems={"center"}>
+              <HStack
+                spacing={5}
+                px={5}
+                marginBottom={"20px"}
+                alignItems="flex-start"
+                color={"white"}
+              >
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<FaLinkedinIn size="25px" />}
+                  onClick={handleLinkedin}
+                />
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<BsGithub size="25px" />}
+                  onClick={handleGithub}
+                />
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<FaEnvelope size="22px" />}
+                  onClick={handleEmail}
+                />
+              </HStack>
               <Button
                 href="#resume"
                 className="nav-link resume"
@@ -104,6 +184,7 @@ const Home = () => {
                   borderRadius: "20px",
                 }}
                 rightIcon={<FaDownload />}
+                onClick={handleResume}
               >
                 Resume
               </Button>
@@ -114,7 +195,7 @@ const Home = () => {
               position={"relative"}
               width={{ base: "80%", md: "80%", lg: "60%" }}
             >
-              <div class="avatar">
+              <div className="avatar">
                 <img
                   className="home-img"
                   src={portfolioPic}
