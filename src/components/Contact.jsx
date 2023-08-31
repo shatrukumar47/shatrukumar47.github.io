@@ -58,13 +58,17 @@ const Contact = () => {
 
   //handleEmail
   const handleEmail = () => {
-    console.log("Email");
+    const link = document.createElement("a");
+    link.href = "mailto:shatrukumar47@gmail.com";
+    link.click();
   };
 
   //handlePhone
-  const handlePhone = ()=>{
-    console.log("Phone")
-  }
+  const handlePhone = () => {
+    const link = document.createElement("a");
+    link.href = "tel:+918858903109";
+    link.click();
+  };
 
   return (
     <Container
@@ -93,13 +97,13 @@ const Contact = () => {
                     <VStack pl={0} spacing={3} alignItems="flex-start">
                       <HStack>
                         <MdPhone color="#F74343" size="20px" />
-                        <Text size="md" color="#DCE2FF">
+                        <Text id="contact-phone" size="md" color="#DCE2FF">
                           +91-8858903109
                         </Text>
                       </HStack>
                       <HStack>
                         <MdEmail color="#F74343" size="20px" />
-                        <Text size="md" color="#DCE2FF">
+                        <Text id="contact-email" size="md" color="#DCE2FF">
                           shatrukumar47@gmail.com
                         </Text>
                       </HStack>
@@ -139,7 +143,6 @@ const Contact = () => {
                       onClick={handleGithub}
                     />
                     <IconButton
-                      id="contact-phone"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}
@@ -149,7 +152,6 @@ const Contact = () => {
                       onClick={handlePhone}
                     />
                     <IconButton
-                      id="contact-email"
                       variant="ghost"
                       size="lg"
                       color={"#C651CD"}

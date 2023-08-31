@@ -41,7 +41,7 @@ const About = () => {
               <Box marginTop={"5px"}>
                 <FaReact color="#C651CD" fontSize={"20px"} />
               </Box>
-              <Text color={"white"} textAlign={"justify"}>
+              <Text id="user-detail-intro" color={"white"} textAlign={"justify"}>
                 As an outcome-driven Full Stack Web Developer, I bring my
                 expertise in both Frontend & Backend, acquired through rigorous
                 training at Masai School. With a portfolio showcasing successful

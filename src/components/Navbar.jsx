@@ -138,7 +138,7 @@ const Navbar = () => {
             <Button
               href="#resume"
               className="nav-link resume"
-              id="resume-link-1"
+              id="resume-button-1"
               color="#C651CD"
               border={"1px solid #C651CD"}
               variant={"outline"}

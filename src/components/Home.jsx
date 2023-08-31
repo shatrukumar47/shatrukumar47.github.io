@@ -56,7 +56,9 @@ const Home = () => {
 
   //handleEmail
   const handleEmail = () => {
-    console.log("Email");
+    const link = document.createElement("a");
+    link.href = "mailto:shatrukumar47@gmail.com";
+    link.click();
   };
 
   //handleResume
@@ -181,7 +183,7 @@ const Home = () => {
               <Button
                 href="#resume"
                 className="nav-link resume"
-                id="resume-link-2"
+                id="resume-button-2"
                 color="#C651CD"
                 border={"1px solid #C651CD"}
                 variant={"outline"}
