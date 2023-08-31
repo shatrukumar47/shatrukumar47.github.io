@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9a56e401.css",
-    "main.js": "/static/js/main.e438ca2d.js",
+    "main.js": "/static/js/main.c4e4255d.js",
     "static/media/porfolioPic.png": "/static/media/porfolioPic.59d0a0027e0fecaa6e72.png",
     "static/media/aboutAnime.gif": "/static/media/aboutAnime.37ef1e1a376ff1b6c967.gif",
     "static/media/FitQuest.png": "/static/media/FitQuest.4e6d47d1be61bc101f24.png",
@@ -19,10 +19,10 @@
     "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.4f00d78f67f451cf01173f7418aa186f.svg",
     "static/media/js-icon.svg": "/static/media/js-icon.2d25723e91c8a9e057ae447ae6a73ecb.svg",
     "main.9a56e401.css.map": "/static/css/main.9a56e401.css.map",
-    "main.e438ca2d.js.map": "/static/js/main.e438ca2d.js.map"
+    "main.c4e4255d.js.map": "/static/js/main.c4e4255d.js.map"
   },
   "entrypoints": [
     "static/css/main.9a56e401.css",
-    "static/js/main.e438ca2d.js"
+    "static/js/main.c4e4255d.js"
   ]
 }
