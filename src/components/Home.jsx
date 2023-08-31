@@ -41,8 +41,8 @@ const Home = () => {
     };
   }, []);
 
-   //Linkedin
-   const handleLinkedin = () => {
+  //Linkedin
+  const handleLinkedin = () => {
     window.open(
       "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
       "_blank"
@@ -55,14 +55,20 @@ const Home = () => {
   };
 
   //handleEmail
-  const handleEmail = ()=>{
-    console.log("Email")
-  }
+  const handleEmail = () => {
+    console.log("Email");
+  };
 
   //handleResume
-  const handleResume = ()=>{
-    window.open("https://drive.google.com/file/d/1sMl6Y29p9labjv5Z55Dep-PFPFG3Opch/view?usp=sharing", "_blank");
-  }
+  const handleResume = () => {
+    const resumeFilename = "Shatrughan-Kumar-Resume.pdf"; // Make sure this matches the filename in the public folder
+    const resumeURL =
+      process.env.PUBLIC_URL + "/Resume/" + "Shatrughan-Kumar-Resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumeURL;
+    link.download = resumeFilename;
+    link.click();
+  };
 
   return (
     <Box id="home" bg={"#0F1624"} color={"white"}>
