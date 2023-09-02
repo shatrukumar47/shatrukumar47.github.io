@@ -36,13 +36,6 @@ import {
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 
 const Contact = () => {
-  // <div id="contact">
-  //   <a href="#" id='contact-github'>Github</a>
-  //   <a href="#" id='contact-linkedin'>Linkedin</a>
-  //   <a href="#" id='contact-phone'>Phone</a>
-  //   <a href="#" id='contact-email'>Email</a>
-  // </div>
-
   //Linkedin
   const handleLinkedin = () => {
     window.open(
@@ -75,7 +68,6 @@ const Contact = () => {
       id="contact"
       bg={"#1E1842"}
       maxW="full"
-      mt={0}
       centerContent
       overflow="hidden"
     >
@@ -173,7 +165,15 @@ const Contact = () => {
                   width={"400px"}
                 >
                   <Box m={8} color="#0B0E3F">
-                    <VStack spacing={5}>
+                    <form
+                      action="https://formspree.io/f/xaygjevz"
+                      method="POST"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "15px",
+                      }}
+                    >
                       <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
@@ -182,8 +182,11 @@ const Contact = () => {
                           </InputLeftElement>
                           <Input
                             type="text"
+                            name="Name"
                             size="md"
                             placeholder="Your Name"
+                            autoComplete="off"
+                            required
                           />
                         </InputGroup>
                       </FormControl>
@@ -194,9 +197,12 @@ const Contact = () => {
                             <MdOutlineEmail color="gray.800" />
                           </InputLeftElement>
                           <Input
-                            type="text"
+                            type="email"
+                            name="Email"
                             size="md"
                             placeholder="Your Email"
+                            autoComplete="off"
+                            required
                           />
                         </InputGroup>
                       </FormControl>
@@ -208,10 +214,14 @@ const Contact = () => {
                             borderRadius: "gray.300",
                           }}
                           placeholder="message"
+                          name="Message"
+                          autoComplete="off"
+                          required
                         />
                       </FormControl>
                       <FormControl id="name" float="right">
                         <Button
+                          type="submit"
                           variant="outline"
                           border="1px solid #F74343"
                           color="#F74343"
@@ -224,7 +234,7 @@ const Contact = () => {
                           Send
                         </Button>
                       </FormControl>
-                    </VStack>
+                    </form>
                   </Box>
                 </Box>
               </WrapItem>
