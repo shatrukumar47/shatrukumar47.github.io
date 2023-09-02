@@ -17,6 +17,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Image,
 } from "@chakra-ui/react";
 import {
   MdPhone,
@@ -34,6 +35,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
+import robotGif from "./robotGif.gif";
 
 const Contact = () => {
   //Linkedin
@@ -66,7 +68,7 @@ const Contact = () => {
   return (
     <Container
       id="contact"
-      bg={"#1E1842"}
+      bg={"black"}
       maxW="full"
       centerContent
       overflow="hidden"
@@ -78,6 +80,7 @@ const Contact = () => {
             borderRadius="lg"
             m={{ sm: 4, md: 16, lg: 10 }}
             p={{ sm: 5, md: 5, lg: 16 }}
+            boxShadow={"rgb(26, 194, 228) 0px 5px 10px 10px"}
           >
             <Box p={4}>
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
@@ -245,10 +248,13 @@ const Contact = () => {
             </Box>
           </Box>
         </Flex>
-        <HStack marginBottom={"20px"} color={"white"} justifyContent={"center"}>
-          <Text>Made with </Text> <FaHeart color="red" /> <Text>By</Text>{" "}
-          <Text color={"#C651CD"}>Shatrughan Kumar</Text>
-        </HStack>
+        <VStack marginBottom={"30px"}>
+          <Image src={robotGif} />
+          <HStack color={"white"} justifyContent={"center"}>
+            <Text>Made with </Text> <FaHeart color="red" /> <Text>By</Text>{" "}
+            <Text color={"#C651CD"}>Shatrughan Kumar</Text>
+          </HStack>
+        </VStack>
       </div>
     </Container>
   );

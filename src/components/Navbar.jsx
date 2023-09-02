@@ -14,6 +14,8 @@ import {
   useDisclosure,
   useColorModeValue,
   Container,
+  DrawerFooter,
+  Image,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import {
@@ -26,13 +28,18 @@ import {
   FaPhoneAlt,
   FaUserTie,
 } from "react-icons/fa";
-import "./Navbar.module.css";
+import robotGif from "./robotGif.gif";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const bgColor = useColorModeValue("black", "black");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = useState("left");
+
+  const [activeLink, setActiveLink] = useState("home");
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
 
   //Navbar Sticky
   useEffect(() => {
@@ -103,35 +110,50 @@ const Navbar = () => {
             <Link
               display={{ base: "none", md: "flex", lg: "flex" }}
               href="#home"
-              className="nav-link home"
+              className={`nav-link home ${
+                activeLink === "home" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("home")}
             >
               Home
             </Link>
             <Link
               display={{ base: "none", md: "flex", lg: "flex" }}
               href="#about"
-              className="nav-link about"
+              className={`nav-link home ${
+                activeLink === "about" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("about")}
             >
               About
             </Link>
             <Link
               display={{ base: "none", md: "flex", lg: "flex" }}
               href="#skills"
-              className="nav-link skills"
+              className={`nav-link home ${
+                activeLink === "skills" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("skills")}
             >
               Skills
             </Link>
             <Link
               display={{ base: "none", md: "flex", lg: "flex" }}
               href="#projects"
-              className="nav-link projects"
+              className={`nav-link home ${
+                activeLink === "project" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("project")}
             >
               Projects
             </Link>
             <Link
               display={{ base: "none", md: "flex", lg: "flex" }}
               href="#contact"
-              className="nav-link contact"
+              className={`nav-link home ${
+                activeLink === "contact" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("contact")}
             >
               Contact
             </Link>
@@ -152,6 +174,7 @@ const Navbar = () => {
               Resume
             </Button>
           </HStack>
+
           <Drawer
             placement={placement}
             onClose={onClose}
@@ -161,13 +184,13 @@ const Navbar = () => {
             <DrawerOverlay />
             <DrawerContent bg={bgColor}>
               <DrawerHeader
-                color={"green.400"}
+                color={"#00FFFF"}
                 borderBottomWidth="1px"
-                borderBottomColor={"green.400"}
+                borderBottomColor={"#00FFFF"}
               >
                 Shatrughan Kumar
               </DrawerHeader>
-              <DrawerCloseButton color="#41A86C" />
+              <DrawerCloseButton color="#00FFFF" />
               <DrawerBody>
                 <VStack
                   color={"white"}
@@ -176,38 +199,86 @@ const Navbar = () => {
                   fontSize={"22px"}
                 >
                   <HStack spacing={"20px"}>
-                    <FaHome color="#41A86C" />
-                    <Link href="#home" className="nav-link home">
+                    <FaHome color="#00FFFF" />
+                    <Link
+                      href="#home"
+                      className={`nav-link home ${
+                        activeLink === "home" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleLinkClick("home");
+                        onClose();
+                      }}
+                    >
                       {" "}
                       Home{" "}
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>
-                    <FaUserTie color="#41A86C" />
-                    <Link href="#about" className="nav-link about">
+                    <FaUserTie color="#00FFFF" />
+                    <Link
+                      href="#about"
+                      className={`nav-link about ${
+                        activeLink === "about" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleLinkClick("about");
+                        onClose();
+                      }}
+                    >
                       About
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>
-                    <FaCogs color="#41A86C" />
-                    <Link href="#skills" className="nav-link skills">
+                    <FaCogs color="#00FFFF" />
+                    <Link
+                      href="#skills"
+                      className={`nav-link skills ${
+                        activeLink === "skills" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleLinkClick("skills");
+                        onClose();
+                      }}
+                    >
                       Skills
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>
-                    <FaDesktop color="#41A86C" />
-                    <Link href="#projects" className="nav-link projects">
+                    <FaDesktop color="#00FFFF" />
+                    <Link
+                      href="#projects"
+                      className={`nav-link projects ${
+                        activeLink === "project" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleLinkClick("project");
+                        onClose();
+                      }}
+                    >
                       Projects
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>
-                    <FaPhoneAlt color="#41A86C" />
-                    <Link href="#contact" className="nav-link contact">
+                    <FaPhoneAlt color="#00FFFF" />
+                    <Link
+                      href="#contact"
+                      className={`nav-link contact ${
+                        activeLink === "contact" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleLinkClick("contact");
+                        onClose();
+                      }}
+                    >
                       Contact
                     </Link>
                   </HStack>
                 </VStack>
               </DrawerBody>
+              <DrawerFooter color={"#00FFFF"}>
+                <Image src={robotGif} />
+              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </HStack>

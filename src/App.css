@@ -3,27 +3,31 @@
   text-align: center;
 }
 
-
 /* <------------------Navbar Start---------------------> */
-#nav-menu{
-  color: #00FFFF;
-  background: #0F1624;
+#nav-menu {
+  color: #00ffff;
+  background: #0f1624;
 }
 
-.active-scroll{
+.active {
+  color: #f74343 !important;
+  border-bottom: 2px solid #00ffff;
+}
+
+.active-scroll {
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: #C651CD 0px 4px 4px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: #c651cd 0px 4px 4px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.nav-icon{
+.nav-icon {
   font-size: 20px;
   transition: font-size 0.3s ease-in-out;
 }
-.nav-icon:hover{
+.nav-icon:hover {
   cursor: pointer;
-  color: #F74343;
+  color: #f74343;
   font-size: 30px;
 }
 
@@ -34,7 +38,7 @@
 #nav-menu .contact {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  color: #00FFFF;
+  color: #00ffff;
   font-size: 16px;
   text-decoration: none;
 }
@@ -44,7 +48,7 @@
 #nav-menu .skills:hover,
 #nav-menu .projects:hover,
 #nav-menu .contact:hover {
-  color: #F74343;
+  color: #f74343;
   transform: scale(1.3);
 }
 
