@@ -20,8 +20,8 @@ import Postman from "../Images/Postman.png";
 
 const Skills = () => {
   return (
-    <div data-aos="flip-up">
-      <Box id="skills" bg={"#0F1624"} padding={"120px 10px 0px 10px"}>
+    <Box id="skills" bg={"#0F1624"} padding={"120px 0px 0px 0px"}>
+      <div data-aos="fade-up">
         <HStack justifyContent={"center"} marginBottom={"100px"}>
           <Heading color={"#C651CD"} textAlign={"center"}>
             Technical
@@ -475,8 +475,8 @@ const Skills = () => {
             d="M0,256L48,261.3C96,267,192,277,288,272C384,267,480,245,576,229.3C672,213,768,203,864,213.3C960,224,1056,256,1152,266.7C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-      </Box>
-    </div>
+      </div>
+    </Box>
   );
 };
 

@@ -24,7 +24,7 @@ const About = () => {
       id="about"
       className="about section"
       bg={"#1E1842"}
-      padding={"120px 10px 0px 10px"}
+      padding={"120px 0px 0px 0px"}
     >
       <div data-aos="fade-up">
         <Container maxW={"8xl"}>
