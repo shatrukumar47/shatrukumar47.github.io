@@ -24,10 +24,10 @@ const About = () => {
       id="about"
       className="about section"
       bg={"#1E1842"}
-      padding={"120px 0px 0px 0px"}
+      // padding={"120px 0px 0px 0px"}
     >
       <div data-aos="fade-up">
-        <Container maxW={"8xl"}>
+        <Container maxW={{ base: "90%", md: "90%", lg: "8xl" }} padding={"0px"}>
           <HStack justifyContent={"center"} marginBottom={"50px"}>
             <Heading color={"#C651CD"} textAlign={"center"}>
               About
@@ -43,10 +43,10 @@ const About = () => {
             <Image src={aboutAnime} />
             <VStack
               spacing={"20px"}
-              w={{ base: "95%", md: "80%", lg: "90%" }}
+              w={{ base: "100%", md: "80%", lg: "90%" }}
               m={"auto"}
             >
-              <div data-aos="fade-left">
+              <div data-aos="fade-up">
                 <HStack
                   alignItems={"flex-start"}
                   justifyContent={"flex-start"}
@@ -70,7 +70,7 @@ const About = () => {
                 </HStack>
               </div>
 
-              <div data-aos="fade-left">
+              <div data-aos="fade-up">
                 <HStack
                   alignItems={"flex-start"}
                   justifyContent={"flex-start"}

@@ -20,7 +20,9 @@ import Postman from "../Images/Postman.png";
 
 const Skills = () => {
   return (
-    <Box id="skills" bg={"#0F1624"} padding={"120px 0px 0px 0px"}>
+    <Box id="skills" bg={"#0F1624"} 
+    // padding={"120px 0px 0px 0px"}
+    >
       <div data-aos="fade-up">
         <HStack justifyContent={"center"} marginBottom={"100px"}>
           <Heading color={"#C651CD"} textAlign={"center"}>

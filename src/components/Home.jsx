@@ -73,7 +73,7 @@ const Home = () => {
   };
 
   return (
-    <Box id="home" bg={"#0F1624"} color={"white"}>
+    <Box id="home" bg={"#0F1624"} color={"white"} >
       <Container maxW={"7xl"}>
         <Stack
           align={"center"}
@@ -81,156 +81,141 @@ const Home = () => {
           py={{ base: 20, md: 28 }}
           direction={{ base: "column", md: "row" }}
         >
-          <div
-            data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
+          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
+            >
+              <Text as={"span"} fontSize={"30px"} color={"#C651CD"}>
+                My name is,
+              </Text>
+              <br />
+              <Text
+                id="user-detail-name"
+                as={"span"}
+                fontWeight={"bold"}
+                fontFamily={"'Play', sans-serif"}
+                letterSpacing={"3px"}
               >
-                <Text as={"span"} fontSize={"30px"} color={"#C651CD"}>
-                  My name is,
-                </Text>
-                <br />
-                <Text
-                  id="user-detail-name"
-                  as={"span"}
-                  fontWeight={"bold"}
-                  fontFamily={"'Play', sans-serif"}
-                  letterSpacing={"3px"}
-                >
-                  SHATRUGHAN KUMAR
-                </Text>
-                <br />
-                <Text fontSize={"30px"} as={"span"} color="#C651CD">
-                  <span ref={typedRef}></span>
-                  <style>
-                    {`
+                SHATRUGHAN KUMAR
+              </Text>
+              <br />
+              <Text fontSize={"30px"} as={"span"} color="#C651CD">
+                <span ref={typedRef}></span>
+                <style>
+                  {`
                       .typed-cursor {
                         color: yellow;
                       }
                     `}
-                  </style>
-                </Text>
-              </Heading>
-              <Text id="user-detail-intro" color={"white"} fontSize={"lg"}>
-                Results-driven{" "}
-                <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                  Full Stack Web Developer
-                </span>{" "}
-                with proficiency in{" "}
-                <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                  MERN
-                </span>
-                (React, Node JS, Express JS, MongoDB) stack. Completed{" "}
-                <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                  1200+
-                </span>{" "}
-                hour web development course at Masai School. Committed to
-                delivering exceptional web solutions and collaborating
-                effectively within teams.
+                </style>
               </Text>
-              <Stack alignItems={"center"}>
-                <HStack
-                  spacing={5}
-                  px={5}
-                  marginBottom={"20px"}
-                  alignItems="flex-start"
-                  color={"white"}
-                >
-                  <IconButton
-                    variant="ghost"
-                    size="lg"
-                    isRound={true}
-                    border={"2px solid #00FFFF"}
-                    color={"#00FFFF"}
-                    _hover={{
-                      bg: "#00FFFF",
-                      color: "black",
-                      boxShadow: "#00FFFF 0px 0px 10px 5px",
-                    }}
-                    icon={<FaLinkedinIn size="25px" />}
-                    onClick={handleLinkedin}
-                  />
-                  <IconButton
-                    variant="ghost"
-                    size="lg"
-                    isRound={true}
-                    border={"2px solid #00FFFF"}
-                    color={"#00FFFF"}
-                    _hover={{
-                      bg: "#00FFFF",
-                      color: "black",
-                      boxShadow: "#00FFFF 0px 0px 10px 5px",
-                    }}
-                    icon={<BsGithub size="25px" />}
-                    onClick={handleGithub}
-                  />
-                  <IconButton
-                    variant="ghost"
-                    size="lg"
-                    isRound={true}
-                    border={"2px solid #00FFFF"}
-                    color={"#00FFFF"}
-                    _hover={{
-                      bg: "#00FFFF",
-                      color: "black",
-                      boxShadow: "#00FFFF 0px 0px 10px 5px",
-                    }}
-                    icon={<FaEnvelope size="22px" />}
-                    onClick={handleEmail}
-                  />
-                </HStack>
-                <Button
-                  href="#resume"
-                  className="nav-link resume"
-                  id="resume-button-2"
-                  color="#C651CD"
-                  border={"1px solid #C651CD"}
-                  variant={"outline"}
-                  transition={"border-radius 0.3s ease-in-out"}
-                  _hover={{
-                    borderRadius: "20px",
-                  }}
-                  rightIcon={<FaDownload />}
-                  onClick={handleResume}
-                >
-                  Resume
-                </Button>
-              </Stack>
-            </Stack>
-          </div>
-          <div
-            data-aos="flip-left"
-            data-aos-offset="200"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <Flex flex={1} justify={"center"} position={"relative"}>
-              <Box
-                position={"relative"}
-                width={{ base: "80%", md: "80%", lg: "60%" }}
+            </Heading>
+            <Text id="user-detail-intro" color={"white"} fontSize={"lg"}>
+              Results-driven{" "}
+              <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                Full Stack Web Developer
+              </span>{" "}
+              with proficiency in{" "}
+              <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                MERN
+              </span>
+              (React, Node JS, Express JS, MongoDB) stack. Completed{" "}
+              <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                1200+
+              </span>{" "}
+              hour web development course at Masai School. Committed to
+              delivering exceptional web solutions and collaborating effectively
+              within teams.
+            </Text>
+            <Stack alignItems={"center"}>
+              <HStack
+                spacing={5}
+                px={5}
+                marginBottom={"20px"}
+                alignItems="flex-start"
+                color={"white"}
               >
-                <div className="avatar">
-                  <img
-                    className="home-img"
-                    src={portfolioPic}
-                    alt="profile-pic"
-                  />
-                </div>
-              </Box>
-            </Flex>
-          </div>
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<FaLinkedinIn size="25px" />}
+                  onClick={handleLinkedin}
+                />
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<BsGithub size="25px" />}
+                  onClick={handleGithub}
+                />
+                <IconButton
+                  variant="ghost"
+                  size="lg"
+                  isRound={true}
+                  border={"2px solid #00FFFF"}
+                  color={"#00FFFF"}
+                  _hover={{
+                    bg: "#00FFFF",
+                    color: "black",
+                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                  }}
+                  icon={<FaEnvelope size="22px" />}
+                  onClick={handleEmail}
+                />
+              </HStack>
+              <Button
+                href="#resume"
+                className="nav-link resume"
+                id="resume-button-2"
+                color="#C651CD"
+                border={"1px solid #C651CD"}
+                variant={"outline"}
+                transition={"border-radius 0.3s ease-in-out"}
+                _hover={{
+                  borderRadius: "20px",
+                }}
+                rightIcon={<FaDownload />}
+                onClick={handleResume}
+              >
+                Resume
+              </Button>
+            </Stack>
+          </Stack>
+
+          <Flex flex={1} justify={"center"} position={"relative"}>
+            <Box
+              position={"relative"}
+              width={{ base: "80%", md: "80%", lg: "60%" }}
+            >
+              <div className="avatar">
+                <img
+                  className="home-img"
+                  src={portfolioPic}
+                  alt="profile-pic"
+                />
+              </div>
+            </Box>
+          </Flex>
         </Stack>
       </Container>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 200 1440 120">
         <path
           fill="#1E1842"
           fill-opacity="1"

@@ -9,13 +9,13 @@ import {
   DrawerHeader,
   DrawerOverlay,
   HStack,
-  Link,
   VStack,
   useDisclosure,
   useColorModeValue,
   Container,
   DrawerFooter,
   Image,
+  Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import {
@@ -23,12 +23,14 @@ import {
   FaDesktop,
   FaDownload,
   FaGithub,
+  FaHeart,
   FaHome,
   FaLinkedinIn,
   FaPhoneAlt,
   FaUserTie,
 } from "react-icons/fa";
 import robotGif from "./robotGif.gif";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -36,15 +38,10 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = useState("left");
 
-  const [activeLink, setActiveLink] = useState("home");
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
-
   //Navbar Sticky
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 0);
+      setScroll(window.scrollY > 100);
     });
   }, []);
 
@@ -104,56 +101,65 @@ const Navbar = () => {
             <FaGithub className="nav-icon" onClick={handleGithub} />
           </HStack>
           <HStack
-            display={{ base: "flex", md: "flex", lg: "flex" }}
+            display={{ base: "none", md: "flex", lg: "flex" }}
             spacing={{ base: "10px", md: "15px", lg: "20px" }}
           >
             <Link
-              display={{ base: "none", md: "flex", lg: "flex" }}
-              href="#home"
-              className={`nav-link home ${
-                activeLink === "home" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("home")}
+              activeClass={"active"}
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={0}
+              className="nav-link home"
             >
               Home
             </Link>
             <Link
-              display={{ base: "none", md: "flex", lg: "flex" }}
-              href="#about"
-              className={`nav-link home ${
-                activeLink === "about" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("about")}
+              activeClass={"active"}
+              spy={true}
+              to="about"
+              smooth={true}
+              offset={-100}
+              delay={0}
+              duration={0}
+              className="nav-link home"
             >
               About
             </Link>
             <Link
-              display={{ base: "none", md: "flex", lg: "flex" }}
-              href="#skills"
-              className={`nav-link home ${
-                activeLink === "skills" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("skills")}
+              activeClass={"active"}
+              spy={true}
+              to="skills"
+              smooth={true}
+              offset={-150}
+              delay={0}
+              duration={0}
+              className="nav-link home"
             >
               Skills
             </Link>
             <Link
-              display={{ base: "none", md: "flex", lg: "flex" }}
-              href="#projects"
-              className={`nav-link home ${
-                activeLink === "project" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("project")}
+              activeClass={"active"}
+              spy={true}
+              to="projects"
+              smooth={true}
+              offset={-150}
+              delay={0}
+              duration={0}
+              className="nav-link home"
             >
               Projects
             </Link>
             <Link
-              display={{ base: "none", md: "flex", lg: "flex" }}
-              href="#contact"
-              className={`nav-link home ${
-                activeLink === "contact" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("contact")}
+              activeClass={"active"}
+              spy={true}
+              to="contact"
+              smooth={true}
+              offset={-150}
+              delay={0}
+              duration={0}
+              className="nav-link home"
             >
               Contact
             </Link>
@@ -175,6 +181,7 @@ const Navbar = () => {
             </Button>
           </HStack>
 
+          {/* <----------------------Burger Menu-------------------------------> */}
           <Drawer
             placement={placement}
             onClose={onClose}
@@ -201,30 +208,30 @@ const Navbar = () => {
                   <HStack spacing={"20px"}>
                     <FaHome color="#00FFFF" />
                     <Link
-                      href="#home"
-                      className={`nav-link home ${
-                        activeLink === "home" ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        handleLinkClick("home");
-                        onClose();
-                      }}
+                      activeClass={"active"}
+                      to="home"
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={()=> onClose()}
                     >
-                      {" "}
-                      Home{" "}
+                      Home
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>
                     <FaUserTie color="#00FFFF" />
                     <Link
-                      href="#about"
-                      className={`nav-link about ${
-                        activeLink === "about" ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        handleLinkClick("about");
-                        onClose();
-                      }}
+                      activeClass={"active"}
+                      spy={true}
+                      to="about"
+                      smooth={true}
+                      offset={-100}
+                      delay={0}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={()=> onClose()}
                     >
                       About
                     </Link>
@@ -232,14 +239,15 @@ const Navbar = () => {
                   <HStack spacing={"20px"}>
                     <FaCogs color="#00FFFF" />
                     <Link
-                      href="#skills"
-                      className={`nav-link skills ${
-                        activeLink === "skills" ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        handleLinkClick("skills");
-                        onClose();
-                      }}
+                      activeClass={"active"}
+                      spy={true}
+                      to="skills"
+                      smooth={true}
+                      offset={-100}
+                      delay={0}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={()=> onClose()}
                     >
                       Skills
                     </Link>
@@ -247,14 +255,15 @@ const Navbar = () => {
                   <HStack spacing={"20px"}>
                     <FaDesktop color="#00FFFF" />
                     <Link
-                      href="#projects"
-                      className={`nav-link projects ${
-                        activeLink === "project" ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        handleLinkClick("project");
-                        onClose();
-                      }}
+                      activeClass={"active"}
+                      spy={true}
+                      to="projects"
+                      smooth={true}
+                      offset={-100}
+                      delay={0}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={()=> onClose()}
                     >
                       Projects
                     </Link>
@@ -262,14 +271,15 @@ const Navbar = () => {
                   <HStack spacing={"20px"}>
                     <FaPhoneAlt color="#00FFFF" />
                     <Link
-                      href="#contact"
-                      className={`nav-link contact ${
-                        activeLink === "contact" ? "active" : ""
-                      }`}
-                      onClick={() => {
-                        handleLinkClick("contact");
-                        onClose();
-                      }}
+                      activeClass={"active"}
+                      spy={true}
+                      to="contact"
+                      smooth={true}
+                      offset={-150}
+                      delay={0}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={()=> onClose()}
                     >
                       Contact
                     </Link>
@@ -277,7 +287,14 @@ const Navbar = () => {
                 </VStack>
               </DrawerBody>
               <DrawerFooter color={"#00FFFF"}>
-                <Image src={robotGif} />
+                <VStack spacing={0}>
+                  <Image src={robotGif} />
+                  <HStack color={"white"} fontSize={"10px"}>
+                    <Text>Made with</Text> <FaHeart color="red" />
+                    <Text>By</Text>
+                    <Text color={"#C651CD"}>Shatrughan Kumar</Text>
+                  </HStack>
+                </VStack>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

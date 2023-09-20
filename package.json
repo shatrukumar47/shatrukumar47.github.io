@@ -8,6 +8,7 @@
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formspree/react": "^2.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,6 +21,7 @@
     "react-icons": "^4.10.1",
     "react-particles": "^2.10.1",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
     "tsparticles": "^2.11.0",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"

@@ -53,3 +53,57 @@
 }
 
 /* <------------------Navbar End---------------------> */
+
+.scroll-top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scroll-to-top {
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.scroll-btn-icon {
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: #00ffff 0px 0px 10px 5px;
+  border: 2px solid #00ffff;
+  animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
+}
+
+/* mobile screen */
+@media (max-width: 767px) {
+  .scroll-to-top {
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 0rem;
+    z-index: 999;
+  }
+}

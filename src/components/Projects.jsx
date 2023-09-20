@@ -5,6 +5,7 @@ import {
   HStack,
   Heading,
   Image,
+  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -13,10 +14,17 @@ import { FaGithub, FaRegPaperPlane } from "react-icons/fa";
 
 //image
 import FitQuest from "../Images/FitQuest.png";
+import Notes from "../Images/Notes.png";
+import PillReminder from "../Images/PillReminder.png";
+import Portfolio from "../Images/Portfolio.png";
 
 const Projects = () => {
   return (
-    <Box id="projects" bg={"#1E1842"} padding={"120px 0px 0px 0px"}>
+    <Box
+      id="projects"
+      bg={"#1E1842"}
+      // padding={"120px 0px 0px 0px"}
+    >
       <div data-aos="fade-up">
         <HStack justifyContent={"center"} marginBottom={"100px"}>
           <Heading color={"#C651CD"} textAlign={"center"}>
@@ -27,34 +35,45 @@ const Projects = () => {
           </Heading>
         </HStack>
         <Container
-          maxW={{ base: "100%", md: "100%", lg: "90%" }}
-          display={"grid"}
-          gridTemplateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          gap={"40px"}
+          maxW={{ base: "95%", md: "90%", lg: "7xl" }}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"50px"}
         >
           <div data-aos="flip-up">
-            <VStack
+            <Stack
               className="project-card"
+              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              margin={"auto"}
+              flexDirection={{ base: "column", md: "column", lg: "row" }}
               bg={"white"}
-              borderRadius={"20px"}
-              paddingBottom={"10px"}
+              borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
               transition={".3s ease-in-out 0s"}
               _hover={{
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
               }}
             >
               <Image
-                width={"100%"}
+                width={{ base: "100%", md: "100%", lg: "800px" }}
+                objectFit={"cover"}
                 src={FitQuest}
                 alt="FitQuest"
-                borderRadius={"20px 20px 0px 0px"}
+                borderRadius={{
+                  base: "10px 10px 0px 0px",
+                  md: "10px 10px 0px 0px",
+                  lg: "10px 0px 0px 10px",
+                }}
               />
-              <VStack padding={"20px"} spacing={"10px"}>
+              <VStack
+                padding={{
+                  base: "15px 15px",
+                  md: "20px 30px",
+                  lg: "20px 30px",
+                }}
+                spacing={"10px"}
+                justifyContent={"space-between"}
+              >
                 <Heading
                   fontSize={"22px"}
                   color={"#C651CD"}
@@ -63,9 +82,12 @@ const Projects = () => {
                   FitQuest
                 </Heading>
                 <Text className="project-description" textAlign={"justify"}>
-                  FitQuest is a fitness application that aims to help manage
-                  user's calories by providing various exercises with calculated
-                  burned calories and helpful tips to help improve their health.
+                  FitQuest is a dynamic fitness application designed to assist
+                  users in effectively managing their calorie intake. It offers
+                  a wide array of exercises, complete with calculated calories
+                  burned and valuable health-improvement tips, empowering users
+                  to take control of their fitness journey and enhance their
+                  overall well-being.
                 </Text>
                 <VStack>
                   <Text
@@ -90,6 +112,12 @@ const Projects = () => {
                     _hover={{
                       background: "black",
                     }}
+                    onClick={() => {
+                      window.open(
+                        "https://github.com/shatrukumar47/vogue-pocket-8479/tree/main",
+                        "_blank"
+                      );
+                    }}
                   >
                     Code
                   </Button>
@@ -102,43 +130,67 @@ const Projects = () => {
                       color: "white",
                       background: "green",
                     }}
+                    onClick={() => {
+                      window.open(
+                        "https://dancing-sundae-d284dd.netlify.app/",
+                        "_blank"
+                      );
+                    }}
                   >
                     Live
                   </Button>
                 </HStack>
               </VStack>
-            </VStack>
+            </Stack>
           </div>
 
           <div data-aos="flip-up">
-            <VStack
+            <Stack
               className="project-card"
+              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              margin={"auto"}
+              flexDirection={{ base: "column", md: "column", lg: "row" }}
               bg={"white"}
-              borderRadius={"20px"}
+              borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
               transition={".3s ease-in-out 0s"}
               _hover={{
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
               }}
             >
               <Image
-                width={"100%"}
-                src={FitQuest}
-                alt="FitQuest"
-                borderRadius={"20px 20px 0px 0px"}
+                width={{ base: "100%", md: "100%", lg: "800px" }}
+                objectFit={"cover"}
+                src={Notes}
+                alt="Notes"
+                borderRadius={{
+                  base: "10px 10px 0px 0px",
+                  md: "10px 10px 0px 0px",
+                  lg: "10px 0px 0px 10px",
+                }}
               />
-              <VStack padding={"20px"} spacing={"10px"}>
+              <VStack
+                padding={{
+                  base: "15px 15px",
+                  md: "20px 30px",
+                  lg: "20px 30px",
+                }}
+                spacing={"10px"}
+                justifyContent={"space-between"}
+              >
                 <Heading
                   fontSize={"22px"}
                   color={"#C651CD"}
                   className="project-title"
                 >
-                  FitQuest
+                  Notes
                 </Heading>
                 <Text className="project-description" textAlign={"justify"}>
-                  FitQuest is a fitness application that aims to help manage
-                  user's calories by providing various exercises with calculated
-                  burned calories and helpful tips to help improve their health.
+                  his is a comprehensive Full Stack Notes Taking App
+                  encompassing both frontend and backend functionalities. With
+                  this application, you can effortlessly create, update, and
+                  delete your notes, providing a seamless and efficient
+                  note-taking experience.
                 </Text>
                 <VStack>
                   <Text
@@ -163,6 +215,12 @@ const Projects = () => {
                     _hover={{
                       background: "black",
                     }}
+                    onClick={() => {
+                      window.open(
+                        "https://github.com/shatrukumar47/Full-Stack-Notes-Mini-Project",
+                        "_blank"
+                      );
+                    }}
                   >
                     Code
                   </Button>
@@ -175,43 +233,63 @@ const Projects = () => {
                       color: "white",
                       background: "green",
                     }}
+                    onClick={() => {
+                      window.open("https://notesshatru.netlify.app/", "_blank");
+                    }}
                   >
                     Live
                   </Button>
                 </HStack>
               </VStack>
-            </VStack>
+            </Stack>
           </div>
 
           <div data-aos="flip-up">
-            <VStack
+            <Stack
               className="project-card"
+              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              margin={"auto"}
+              flexDirection={{ base: "column", md: "column", lg: "row" }}
               bg={"white"}
-              borderRadius={"20px"}
+              borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
               transition={".3s ease-in-out 0s"}
               _hover={{
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
               }}
             >
               <Image
-                width={"100%"}
-                src={FitQuest}
-                alt="FitQuest"
-                borderRadius={"20px 20px 0px 0px"}
+                width={{ base: "100%", md: "100%", lg: "800px" }}
+                objectFit={"cover"}
+                src={PillReminder}
+                alt="PillAlert"
+                borderRadius={{
+                  base: "10px 10px 0px 0px",
+                  md: "10px 10px 0px 0px",
+                  lg: "10px 0px 0px 10px",
+                }}
               />
-              <VStack padding={"20px"} spacing={"10px"}>
+              <VStack
+                padding={{
+                  base: "15px 15px",
+                  md: "20px 30px",
+                  lg: "20px 30px",
+                }}
+                spacing={"10px"}
+                justifyContent={"space-between"}
+              >
                 <Heading
                   fontSize={"22px"}
                   color={"#C651CD"}
                   className="project-title"
                 >
-                  FitQuest
+                  Pill Alert
                 </Heading>
                 <Text className="project-description" textAlign={"justify"}>
-                  FitQuest is a fitness application that aims to help manage
-                  user's calories by providing various exercises with calculated
-                  burned calories and helpful tips to help improve their health.
+                  Welcome to Pill Alert! This project is dedicated to
+                  simplifying medication management. Our mission is to help
+                  users track and manage their medications effectively by
+                  setting reminder to take pill on time.
                 </Text>
                 <VStack>
                   <Text
@@ -222,9 +300,7 @@ const Projects = () => {
                     Tech Stacks
                   </Text>
                   <Text fontSize={"15px"}>
-                    HTML5 | CSS3 | JavaScript | React | Redux | Chakra UI |
-                    Thunk | Axios | Node Js | Express JS | MongoDB | Mongoose |
-                    Bcrypt | JsonWebToken{" "}
+                    HTML5 | CSS3 | JavaScript | React | Chakra UI
                   </Text>
                 </VStack>
                 <HStack spacing={"50px"} marginTop={"20px"}>
@@ -235,6 +311,12 @@ const Projects = () => {
                     leftIcon={<FaGithub />}
                     _hover={{
                       background: "black",
+                    }}
+                    onClick={() => {
+                      window.open(
+                        "https://github.com/shatrukumar47/unwavering-squirrel-8299",
+                        "_blank"
+                      );
                     }}
                   >
                     Code
@@ -248,43 +330,66 @@ const Projects = () => {
                       color: "white",
                       background: "green",
                     }}
+                    onClick={() => {
+                      window.open(
+                        "https://tangerine-dusk-0353ff.netlify.app/",
+                        "_blank"
+                      );
+                    }}
                   >
                     Live
                   </Button>
                 </HStack>
               </VStack>
-            </VStack>
+            </Stack>
           </div>
 
           <div data-aos="flip-up">
-            <VStack
+            <Stack
               className="project-card"
+              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              margin={"auto"}
+              flexDirection={{ base: "column", md: "column", lg: "row" }}
               bg={"white"}
-              borderRadius={"20px"}
+              borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
               transition={".3s ease-in-out 0s"}
               _hover={{
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
               }}
             >
               <Image
-                width={"100%"}
-                src={FitQuest}
-                alt="FitQuest"
-                borderRadius={"20px 20px 0px 0px"}
+                width={{ base: "100%", md: "100%", lg: "800px" }}
+                objectFit={"cover"}
+                src={Portfolio}
+                alt="portfolio"
+                borderRadius={{
+                  base: "10px 10px 0px 0px",
+                  md: "10px 10px 0px 0px",
+                  lg: "10px 0px 0px 10px",
+                }}
               />
-              <VStack padding={"20px"} spacing={"10px"}>
+              <VStack
+                padding={{
+                  base: "15px 15px",
+                  md: "20px 30px",
+                  lg: "20px 30px",
+                }}
+                spacing={"10px"}
+                justifyContent={"space-between"}
+              >
                 <Heading
                   fontSize={"22px"}
                   color={"#C651CD"}
                   className="project-title"
                 >
-                  FitQuest
+                  My Portfolio
                 </Heading>
                 <Text className="project-description" textAlign={"justify"}>
-                  FitQuest is a fitness application that aims to help manage
-                  user's calories by providing various exercises with calculated
-                  burned calories and helpful tips to help improve their health.
+                  Welcome to this meticulously crafted portfolio, a testament to
+                  the power of design and frontend development. As you explore
+                  its pages, you'll discover a harmonious blend of form and
+                  function, where aesthetics meet usability.
                 </Text>
                 <VStack>
                   <Text
@@ -295,9 +400,7 @@ const Projects = () => {
                     Tech Stacks
                   </Text>
                   <Text fontSize={"15px"}>
-                    HTML5 | CSS3 | JavaScript | React | Redux | Chakra UI |
-                    Thunk | Axios | Node Js | Express JS | MongoDB | Mongoose |
-                    Bcrypt | JsonWebToken{" "}
+                    HTML5 | CSS3 | JavaScript | React | Chakra UI
                   </Text>
                 </VStack>
                 <HStack spacing={"50px"} marginTop={"20px"}>
@@ -308,6 +411,12 @@ const Projects = () => {
                     leftIcon={<FaGithub />}
                     _hover={{
                       background: "black",
+                    }}
+                    onClick={() => {
+                      window.open(
+                        "https://github.com/shatrukumar47/shatrukumar47.github.io",
+                        "_blank"
+                      );
                     }}
                   >
                     Code
@@ -321,12 +430,15 @@ const Projects = () => {
                       color: "white",
                       background: "green",
                     }}
+                    onClick={() => {
+                      window.open("https://shatrukumar47.github.io/", "_blank");
+                    }}
                   >
                     Live
                   </Button>
                 </HStack>
               </VStack>
-            </VStack>
+            </Stack>
           </div>
         </Container>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

@@ -4,7 +4,9 @@ import GitHubCalendar from "react-github-calendar";
 
 const GithubOverview = () => {
   return (
-    <Box bg={"#0F1624"} padding={"0px 0px 0px 0px"}>
+    <Box bg={"#0F1624"} 
+    // padding={"0px 0px 0px 0px"}
+    >
       <div data-aos="fade-up">
         <HStack justifyContent={"center"} marginBottom={"50px"}>
           <Heading color={"#C651CD"} textAlign={"center"}>
@@ -15,7 +17,7 @@ const GithubOverview = () => {
           </Heading>
         </HStack>
 
-        <Container maxW={"8xl"}>
+        <Container maxW={"90%"}>
           <div data-aos="zoom-in-up">
             <Box
               bg={"#095c80"}
@@ -92,7 +94,6 @@ const GithubOverview = () => {
                 }}
               />
             </div>
-            
           </Box>
         </Container>
 

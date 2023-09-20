@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Flex,
@@ -18,26 +18,93 @@ import {
   InputLeftElement,
   Textarea,
   Image,
+  useToast,
 } from "@chakra-ui/react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
-import {
-  FaEnvelope,
-  FaHeart,
-  FaLinkedinIn,
-  FaLongArrowAltRight,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
+import { useForm } from "@formspree/react";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  //Toast feature
+  const toast = useToast();
+
+  const [state, handleSubmit] = useForm("xaygjevz");
+
+  //handleChange
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setForm((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  // handleSendBTN
+  const handleSendBTN = (e) => {
+    e.preventDefault();
+    if (form?.name && form?.email && form?.message) {
+      setIsLoading(true);
+      if (state.succeeded) {
+        toast({
+          title: `Message Sent ☺`,
+          description:
+            "Thank you for reaching out. I'll get back to you shortly.",
+          position: "top",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        setIsLoading(false);
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+      console.log(state.succeeded);
+    } else {
+      toast({
+        title: `All fields are required !`,
+        position: "top",
+        status: "warning",
+        duration: 2000,
+        isClosable: true,
+      });
+    }
+  };
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     console.log("inside set time out", state.succeeded)
+  //     if (state.succeeded) {
+  //       toast({
+  //         title: `Message Sent ☺`,
+  //         description:
+  //           "Thank you for reaching out. I'll get back to you shortly.",
+  //         position: "top",
+  //         status: "success",
+  //         duration: 3000,
+  //         isClosable: true,
+  //       });
+  //       setIsLoading(false);
+  //       setForm({
+  //         name: "",
+  //         email: "",
+  //         message: "",
+  //       });
+  //     }
+  //   }, 2000);
+  // }, [state.succeeded]);
+
   //Linkedin
   const handleLinkedin = () => {
     window.open(
@@ -171,13 +238,12 @@ const Contact = () => {
                     >
                       <Box m={8} color="#0B0E3F">
                         <form
-                          action="https://formspree.io/f/xaygjevz"
-                          method="POST"
                           style={{
                             display: "flex",
                             flexDirection: "column",
                             gap: "15px",
                           }}
+                          onSubmit={handleSubmit}
                         >
                           <FormControl id="name">
                             <FormLabel>Your Name</FormLabel>
@@ -187,15 +253,16 @@ const Contact = () => {
                               </InputLeftElement>
                               <Input
                                 type="text"
-                                name="Name"
+                                name="name"
+                                value={form?.name}
                                 size="md"
                                 placeholder="Your Name"
-                                autoComplete="off"
                                 required
+                                onChange={handleChange}
                               />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="name">
+                          <FormControl id="email">
                             <FormLabel>Mail</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
@@ -203,15 +270,16 @@ const Contact = () => {
                               </InputLeftElement>
                               <Input
                                 type="email"
-                                name="Email"
+                                name="email"
+                                value={form?.email}
                                 size="md"
                                 placeholder="Your Email"
-                                autoComplete="off"
                                 required
+                                onChange={handleChange}
                               />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="name">
+                          <FormControl id="message">
                             <FormLabel>Message</FormLabel>
                             <Textarea
                               borderColor="gray.300"
@@ -219,12 +287,13 @@ const Contact = () => {
                                 borderRadius: "gray.300",
                               }}
                               placeholder="message"
-                              name="Message"
-                              autoComplete="off"
+                              name="message"
+                              value={form?.message}
                               required
+                              onChange={handleChange}
                             />
                           </FormControl>
-                          <FormControl id="name" float="right">
+                          <FormControl id="submit" float="right">
                             <Button
                               type="submit"
                               variant="outline"
@@ -235,6 +304,9 @@ const Contact = () => {
                                 borderRadius: "20px",
                               }}
                               rightIcon={<ArrowForwardIcon />}
+                              onClick={handleSendBTN}
+                              isDisabled={state.submitting}
+                              isLoading={isLoading}
                             >
                               Send
                             </Button>
