@@ -55,7 +55,7 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "800px" }}
+                width={{ base: "100%", md: "100%", lg: "700px" }}
                 objectFit={"cover"}
                 src={FitQuest}
                 alt="FitQuest"
@@ -159,8 +159,8 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "800px" }}
-                objectFit={"cover"}
+                width={{ base: "100%", md: "100%", lg: "700px" }}
+                // objectFit={"cover"}
                 src={Notes}
                 alt="Notes"
                 borderRadius={{
@@ -186,7 +186,7 @@ const Projects = () => {
                   Notes
                 </Heading>
                 <Text className="project-description" textAlign={"justify"}>
-                  his is a comprehensive Full Stack Notes Taking App
+                  This is a comprehensive Full Stack Notes Taking App
                   encompassing both frontend and backend functionalities. With
                   this application, you can effortlessly create, update, and
                   delete your notes, providing a seamless and efficient
@@ -259,7 +259,7 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "800px" }}
+                width={{ base: "100%", md: "100%", lg: "700px" }}
                 objectFit={"cover"}
                 src={PillReminder}
                 alt="PillAlert"
@@ -359,7 +359,7 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "800px" }}
+                width={{ base: "100%", md: "100%", lg: "700px" }}
                 objectFit={"cover"}
                 src={Portfolio}
                 alt="portfolio"

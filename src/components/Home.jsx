@@ -70,10 +70,14 @@ const Home = () => {
     link.href = resumeURL;
     link.download = resumeFilename;
     link.click();
+    window.open(
+      "https://drive.google.com/file/d/1sMl6Y29p9labjv5Z55Dep-PFPFG3Opch/view",
+      "_blank"
+    );
   };
 
   return (
-    <Box id="home" bg={"#0F1624"} color={"white"} >
+    <Box id="home" bg={"#0F1624"} color={"white"}>
       <Container maxW={"7xl"}>
         <Stack
           align={"center"}

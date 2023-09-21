@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
@@ -21,20 +20,20 @@ const ScrollToTop = () => {
     window.addEventListener("scroll", listentoSroll);
 
     //cleanup
-    return window.removeEventListener("scroll", listentoSroll);
+    // return window.removeEventListener("scroll", listentoSroll);
   }, []);
 
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   return (
-    <Box className="scroll-top-container">
+    <div className="scroll-top-container">
       {visible && (
-        <Box className="scroll-to-top" onClick={handleScrollTop}>
+        <div className="scroll-to-top" onClick={handleScrollTop}>
           <FaArrowAltCircleUp className="scroll-btn-icon" />
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   );
 };
 

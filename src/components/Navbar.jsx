@@ -67,6 +67,10 @@ const Navbar = () => {
     link.href = resumeURL;
     link.download = resumeFilename;
     link.click();
+    window.open(
+      "https://drive.google.com/file/d/1sMl6Y29p9labjv5Z55Dep-PFPFG3Opch/view",
+      "_blank"
+    );
   };
 
   return (
@@ -132,7 +136,7 @@ const Navbar = () => {
               spy={true}
               to="skills"
               smooth={true}
-              offset={-150}
+              offset={-100}
               delay={0}
               duration={0}
               className="nav-link home"
@@ -144,7 +148,7 @@ const Navbar = () => {
               spy={true}
               to="projects"
               smooth={true}
-              offset={-150}
+              offset={-100}
               delay={0}
               duration={0}
               className="nav-link home"
@@ -156,7 +160,7 @@ const Navbar = () => {
               spy={true}
               to="contact"
               smooth={true}
-              offset={-150}
+              offset={-100}
               delay={0}
               duration={0}
               className="nav-link home"
@@ -215,7 +219,7 @@ const Navbar = () => {
                       offset={-100}
                       duration={0}
                       className="nav-link home"
-                      onClick={()=> onClose()}
+                      onClick={() => onClose()}
                     >
                       Home
                     </Link>
@@ -231,7 +235,7 @@ const Navbar = () => {
                       delay={0}
                       duration={0}
                       className="nav-link home"
-                      onClick={()=> onClose()}
+                      onClick={() => onClose()}
                     >
                       About
                     </Link>
@@ -247,7 +251,7 @@ const Navbar = () => {
                       delay={0}
                       duration={0}
                       className="nav-link home"
-                      onClick={()=> onClose()}
+                      onClick={() => onClose()}
                     >
                       Skills
                     </Link>
@@ -263,7 +267,7 @@ const Navbar = () => {
                       delay={0}
                       duration={0}
                       className="nav-link home"
-                      onClick={()=> onClose()}
+                      onClick={() => onClose()}
                     >
                       Projects
                     </Link>
@@ -279,7 +283,7 @@ const Navbar = () => {
                       delay={0}
                       duration={0}
                       className="nav-link home"
-                      onClick={()=> onClose()}
+                      onClick={() => onClose()}
                     >
                       Contact
                     </Link>

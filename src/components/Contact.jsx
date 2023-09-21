@@ -25,7 +25,7 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
-import { useForm } from "@formspree/react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -53,6 +53,19 @@ const Contact = () => {
     e.preventDefault();
     if (form?.name && form?.email && form?.message) {
       setIsLoading(true);
+    } else {
+      toast({
+        title: `All fields are required !`,
+        position: "top",
+        status: "warning",
+        duration: 2000,
+        isClosable: true,
+      });
+    }
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
       if (state.succeeded) {
         toast({
           title: `Message Sent ☺`,
@@ -70,40 +83,8 @@ const Contact = () => {
           message: "",
         });
       }
-      console.log(state.succeeded);
-    } else {
-      toast({
-        title: `All fields are required !`,
-        position: "top",
-        status: "warning",
-        duration: 2000,
-        isClosable: true,
-      });
-    }
-  };
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     console.log("inside set time out", state.succeeded)
-  //     if (state.succeeded) {
-  //       toast({
-  //         title: `Message Sent ☺`,
-  //         description:
-  //           "Thank you for reaching out. I'll get back to you shortly.",
-  //         position: "top",
-  //         status: "success",
-  //         duration: 3000,
-  //         isClosable: true,
-  //       });
-  //       setIsLoading(false);
-  //       setForm({
-  //         name: "",
-  //         email: "",
-  //         message: "",
-  //       });
-  //     }
-  //   }, 2000);
-  // }, [state.succeeded]);
+    }, 2000);
+  }, [state.succeeded]);
 
   //Linkedin
   const handleLinkedin = () => {
@@ -238,37 +219,44 @@ const Contact = () => {
                     >
                       <Box m={8} color="#0B0E3F">
                         <form
+                          method="POST"
+                          onSubmit={handleSubmit}
                           style={{
                             display: "flex",
                             flexDirection: "column",
                             gap: "15px",
                           }}
-                          onSubmit={handleSubmit}
                         >
-                          <FormControl id="name">
+                          <FormControl>
                             <FormLabel>Your Name</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
                                 <BsPerson color="gray.800" />
                               </InputLeftElement>
                               <Input
+                                id="full-name"
                                 type="text"
                                 name="name"
                                 value={form?.name}
                                 size="md"
                                 placeholder="Your Name"
-                                required
                                 onChange={handleChange}
+                              />
+                              <ValidationError
+                                prefix="Name"
+                                field="name"
+                                errors={state.errors}
                               />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="email">
+                          <FormControl>
                             <FormLabel>Mail</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
                                 <MdOutlineEmail color="gray.800" />
                               </InputLeftElement>
                               <Input
+                                id="email"
                                 type="email"
                                 name="email"
                                 value={form?.email}
@@ -277,11 +265,17 @@ const Contact = () => {
                                 required
                                 onChange={handleChange}
                               />
+                              <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                              />
                             </InputGroup>
                           </FormControl>
-                          <FormControl id="message">
+                          <FormControl>
                             <FormLabel>Message</FormLabel>
                             <Textarea
+                              id="message"
                               borderColor="gray.300"
                               _hover={{
                                 borderRadius: "gray.300",
@@ -291,6 +285,11 @@ const Contact = () => {
                               value={form?.message}
                               required
                               onChange={handleChange}
+                            />
+                            <ValidationError
+                              prefix="Message"
+                              field="message"
+                              errors={state.errors}
                             />
                           </FormControl>
                           <FormControl id="submit" float="right">
