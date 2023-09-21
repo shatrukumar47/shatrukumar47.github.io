@@ -35,7 +35,7 @@ const Projects = () => {
           </Heading>
         </HStack>
         <Container
-          maxW={{ base: "95%", md: "90%", lg: "7xl" }}
+          maxW={{ base: "95%", md: "90%", lg: "85%", xl:"7xl" }}
           display={"flex"}
           flexDirection={"column"}
           gap={"50px"}
@@ -43,9 +43,14 @@ const Projects = () => {
           <div data-aos="flip-up">
             <Stack
               className="project-card"
-              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              maxW={{ base: "100%", md: "90%", lg: "90%", xl: "100%" }}
               margin={"auto"}
-              flexDirection={{ base: "column", md: "column", lg: "row" }}
+              flexDirection={{
+                base: "column",
+                md: "column",
+                lg: "column",
+                xl: "row",
+              }}
               bg={"white"}
               borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
@@ -55,14 +60,15 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "700px" }}
+                width={{ base: "100%", md: "100%", lg: "100%", xl: "700px" }}
                 objectFit={"cover"}
                 src={FitQuest}
                 alt="FitQuest"
                 borderRadius={{
                   base: "10px 10px 0px 0px",
                   md: "10px 10px 0px 0px",
-                  lg: "10px 0px 0px 10px",
+                  lg: "10px 10px 0px 0px",
+                  xl: "10px 0px 0px 10px",
                 }}
               />
               <VStack
@@ -147,9 +153,14 @@ const Projects = () => {
           <div data-aos="flip-up">
             <Stack
               className="project-card"
-              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              maxW={{ base: "100%", md: "90%", lg: "90%", xl: "100%" }}
               margin={"auto"}
-              flexDirection={{ base: "column", md: "column", lg: "row" }}
+              flexDirection={{
+                base: "column",
+                md: "column",
+                lg: "column",
+                xl: "row",
+              }}
               bg={"white"}
               borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
@@ -159,14 +170,15 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "700px" }}
-                // objectFit={"cover"}
+                width={{ base: "100%", md: "100%", lg: "100%", xl: "700px" }}
+                objectFit={"cover"}
                 src={Notes}
                 alt="Notes"
                 borderRadius={{
                   base: "10px 10px 0px 0px",
                   md: "10px 10px 0px 0px",
-                  lg: "10px 0px 0px 10px",
+                  lg: "10px 10px 0px 0px",
+                  xl: "10px 0px 0px 10px",
                 }}
               />
               <VStack
@@ -247,9 +259,14 @@ const Projects = () => {
           <div data-aos="flip-up">
             <Stack
               className="project-card"
-              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              maxW={{ base: "100%", md: "90%", lg: "90%", xl: "100%" }}
               margin={"auto"}
-              flexDirection={{ base: "column", md: "column", lg: "row" }}
+              flexDirection={{
+                base: "column",
+                md: "column",
+                lg: "column",
+                xl: "row",
+              }}
               bg={"white"}
               borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
@@ -259,14 +276,15 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "700px" }}
+                width={{ base: "100%", md: "100%", lg: "100%", xl: "700px" }}
                 objectFit={"cover"}
                 src={PillReminder}
                 alt="PillAlert"
                 borderRadius={{
                   base: "10px 10px 0px 0px",
                   md: "10px 10px 0px 0px",
-                  lg: "10px 0px 0px 10px",
+                  lg: "10px 10px 0px 0px",
+                  xl: "10px 0px 0px 10px",
                 }}
               />
               <VStack
@@ -347,9 +365,14 @@ const Projects = () => {
           <div data-aos="flip-up">
             <Stack
               className="project-card"
-              maxW={{ base: "100%", md: "90%", lg: "100%" }}
+              maxW={{ base: "100%", md: "90%", lg: "90%", xl: "100%" }}
               margin={"auto"}
-              flexDirection={{ base: "column", md: "column", lg: "row" }}
+              flexDirection={{
+                base: "column",
+                md: "column",
+                lg: "column",
+                xl: "row",
+              }}
               bg={"white"}
               borderRadius={"11px"}
               boxShadow={"rgb(26, 194, 228) 0px 5px 15px 0px"}
@@ -359,14 +382,15 @@ const Projects = () => {
               }}
             >
               <Image
-                width={{ base: "100%", md: "100%", lg: "700px" }}
+                width={{ base: "100%", md: "100%", lg: "100%", xl: "700px" }}
                 objectFit={"cover"}
                 src={Portfolio}
                 alt="portfolio"
                 borderRadius={{
                   base: "10px 10px 0px 0px",
                   md: "10px 10px 0px 0px",
-                  lg: "10px 0px 0px 10px",
+                  lg: "10px 10px 0px 0px",
+                  xl: "10px 0px 0px 10px",
                 }}
               />
               <VStack
@@ -440,6 +464,7 @@ const Projects = () => {
               </VStack>
             </Stack>
           </div>
+          
         </Container>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path

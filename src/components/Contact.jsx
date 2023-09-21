@@ -215,7 +215,7 @@ const Contact = () => {
                       boxShadow={
                         "rgb(84, 25, 178) 0px 15px 25px, rgb(26, 201, 47) 0px 5px 10px"
                       }
-                      width={"400px"}
+                      width={{ base: "400px", md: "600px", lg: "400px" }}
                     >
                       <Box m={8} color="#0B0E3F">
                         <form
