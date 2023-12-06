@@ -6,19 +6,16 @@ import {
   HStack,
   Heading,
   IconButton,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import portfolioPic from "./porfolioPic.png";
+import portfolioPic from "../assets/Images/porfolioPic.png";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import {
   FaDownload,
   FaEnvelope,
-  FaGithub,
   FaLinkedinIn,
-  FaPhoneAlt,
 } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 
@@ -123,9 +120,9 @@ const Home = () => {
               </span>{" "}
               with proficiency in{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                MERN
-              </span>
-              (React, Node JS, Express JS, MongoDB) stack. Completed{" "}
+                MERN </span>stack.  Swiftly
+                embraces <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>Generative AI</span> and quickly learns new tech
+                stacks. Completed{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
                 1200+
               </span>{" "}

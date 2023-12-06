@@ -21,9 +21,9 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { BsGithub, BsPerson } from "react-icons/bs";
 import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon} from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
 import { useForm, ValidationError } from "@formspree/react";
 
@@ -52,6 +52,8 @@ const Contact = () => {
   const handleSendBTN = (e) => {
     e.preventDefault();
     if (form?.name && form?.email && form?.message) {
+      console.log(("1"))
+      console.log(state.succeeded)
       setIsLoading(true);
     } else {
       toast({
@@ -65,8 +67,10 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const id = setTimeout(() => {
+      console.log("2")
       if (state.succeeded) {
+        console.log("3")
         toast({
           title: `Message Sent ☺`,
           description:
@@ -84,7 +88,12 @@ const Contact = () => {
         });
       }
     }, 2000);
-  }, [state.succeeded]);
+
+    return ()=>{
+      clearTimeout(id);
+    }
+
+  }, [state.succeeded, toast]);
 
   //Linkedin
   const handleLinkedin = () => {

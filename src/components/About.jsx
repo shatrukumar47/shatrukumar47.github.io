@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   HStack,
   Heading,
@@ -10,7 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import aboutAnime from "./aboutAnime.gif";
+import aboutAnime from "../assets/Images/aboutAnime.gif";
 import { FaReact } from "react-icons/fa";
 
 //AOS
@@ -63,7 +62,7 @@ const About = () => {
                     As an outcome-driven Full Stack Web Developer, I bring my
                     expertise in both Frontend & Backend, acquired through
                     rigorous training at Masai School. With a portfolio
-                    showcasing successful web applications and four major
+                    showcasing successful web applications and some major and minor
                     projects, I have developed strong teamwork and communication
                     skills.
                   </Text>
