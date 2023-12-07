@@ -1,14 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f88aac3.css",
-    "main.js": "/static/js/main.141febd9.js",
+    "main.css": "/static/css/main.990f3387.css",
+    "main.js": "/static/js/main.6f9ddb79.js",
     "static/media/porfolioPic.png": "/static/media/porfolioPic.59d0a0027e0fecaa6e72.png",
     "static/media/aboutAnime.gif": "/static/media/aboutAnime.37ef1e1a376ff1b6c967.gif",
-    "static/media/FitQuest.png": "/static/media/FitQuest.4e6d47d1be61bc101f24.png",
+    "static/media/1.png": "/static/media/1.dcfb6ff7c33dd3d73108.png",
+    "static/media/2.png": "/static/media/2.8a85e2f10d93a1934156.png",
+    "static/media/3.png": "/static/media/3.aac10b664db5ff25994d.png",
+    "static/media/4.png": "/static/media/4.7ab534030e5639867d1a.png",
     "static/media/robotGif.gif": "/static/media/robotGif.16f8812de7f8d4377431.gif",
-    "static/media/Portfolio.png": "/static/media/Portfolio.b142fbb3a670a7f66bb4.png",
-    "static/media/PillReminder.png": "/static/media/PillReminder.2f033c260d5a02da85dc.png",
-    "static/media/Notes.png": "/static/media/Notes.2e3550f4df88c445b187.png",
+    "static/media/6.png": "/static/media/6.de57fd183970310d3984.png",
+    "static/media/10.png": "/static/media/10.53c5c2d1c55aa82b51a5.png",
+    "static/media/11.png": "/static/media/11.976df1726f1be5968484.png",
+    "static/media/5.png": "/static/media/5.7f543e2b6d45e7eae2db.png",
+    "static/media/9.png": "/static/media/9.cd16d4843e04237243c7.png",
+    "static/media/7.png": "/static/media/7.632fec7b85cfc3ca087c.png",
+    "static/media/8.png": "/static/media/8.90cbb403d57fc661bce1.png",
+    "static/media/ndoejs.png": "/static/media/ndoejs.dbf5d143917b5b366625.png",
+    "static/media/html.png": "/static/media/html.ca57c97f9a27615d4082.png",
+    "static/media/styledcomponent.png": "/static/media/styledcomponent.b2a4278ae5017d1bc15f.png",
+    "static/media/chakra.png": "/static/media/chakra.4112242f6e4c9a5b203d.png",
+    "static/media/angular.png": "/static/media/angular.46d1daffb29e0a57f8f1.png",
+    "static/media/js.png": "/static/media/js.310d665e5ee727f00229.png",
+    "static/media/react.png": "/static/media/react.60f87e57897ede715c07.png",
+    "static/media/css.png": "/static/media/css.bea56c054124d4888194.png",
     "static/media/node-icon.svg": "/static/media/node-icon.cc3d45a160579a330a5c17cc2c8f1407.svg",
     "static/media/typescript-icon.svg": "/static/media/typescript-icon.f3bc0fd998dea6b1266965436af97a49.svg",
     "static/media/react-icon.svg": "/static/media/react-icon.a010f287ea79ad0673b610a223faa951.svg",
@@ -21,11 +36,11 @@
     "index.html": "/index.html",
     "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.4f00d78f67f451cf01173f7418aa186f.svg",
     "static/media/js-icon.svg": "/static/media/js-icon.2d25723e91c8a9e057ae447ae6a73ecb.svg",
-    "main.3f88aac3.css.map": "/static/css/main.3f88aac3.css.map",
-    "main.141febd9.js.map": "/static/js/main.141febd9.js.map"
+    "main.990f3387.css.map": "/static/css/main.990f3387.css.map",
+    "main.6f9ddb79.js.map": "/static/js/main.6f9ddb79.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f88aac3.css",
-    "static/js/main.141febd9.js"
+    "static/css/main.990f3387.css",
+    "static/js/main.6f9ddb79.js"
   ]
 }
