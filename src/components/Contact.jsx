@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useRef, useState } from "react";
 import {
   Container,
   Flex,
@@ -19,82 +19,90 @@ import {
   Textarea,
   Image,
   useToast,
+  FormErrorMessage,
 } from "@chakra-ui/react";
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson } from "react-icons/bs";
 import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { ArrowForwardIcon} from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
-import { useForm, ValidationError } from "@formspree/react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [form, setForm] = useState({
+
+  const [userInput, setUserInput] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [emailError, setEmailError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
+  const form = useRef();
   //Toast feature
   const toast = useToast();
 
-  const [state, handleSubmit] = useForm("xaygjevz");
-
+  
+  
   //handleChange
   const handleChange = (e) => {
     const { value, name } = e.target;
-    setForm((prev) => {
+    if(name === "email"){
+      checkEmailValidation(value);
+    }
+    setUserInput((prev) => {
       return { ...prev, [name]: value };
     });
   };
+  
+  //checkEmailValidation
+  const checkEmailValidation = (email)=>{
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const msg = emailRegex.test(email) ? "" : "enter valid email address";
+    setEmailError(msg)
+  }
+
 
   // handleSendBTN
-  const handleSendBTN = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (form?.name && form?.email && form?.message) {
-      console.log(("1"))
-      console.log(state.succeeded)
+    if (userInput?.name && userInput?.email && !emailError && userInput?.message) {
       setIsLoading(true);
-    } else {
-      toast({
-        title: `All fields are required !`,
-        position: "top",
-        status: "warning",
-        duration: 2000,
-        isClosable: true,
+      emailjs.sendForm(process.env.REACT_APP_serviceID, process.env.REACT_APP_templateID , form.current, process.env.REACT_APP_publicKey)
+      .then((result) => {
+          console.log(result.text);
+          toast({
+            title: `Message Sent`,
+            description:
+              "Thank you for reaching out. I'll get back to you shortly.",
+            position: "top",
+            status: "success",
+            duration: 3000,
+            isClosable: true,
+          });
+          setIsLoading(false);
+          setUserInput({
+            name: "",
+            email: "",
+            message: "",
+          });
+      }, (error) => {
+          console.log(error.text);
+          toast({
+            title: `Network error`,
+            description:
+              "Something went wrong. Sorry for your inconvenience. Please contact me using other provided sources.",
+            position: "top",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+          });
+          setIsLoading(false);
       });
     }
+
   };
 
-  useEffect(() => {
-    const id = setTimeout(() => {
-      console.log("2")
-      if (state.succeeded) {
-        console.log("3")
-        toast({
-          title: `Message Sent ☺`,
-          description:
-            "Thank you for reaching out. I'll get back to you shortly.",
-          position: "top",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
-        setIsLoading(false);
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      }
-    }, 2000);
-
-    return ()=>{
-      clearTimeout(id);
-    }
-
-  }, [state.succeeded, toast]);
-
+ 
   //Linkedin
   const handleLinkedin = () => {
     window.open(
@@ -228,7 +236,7 @@ const Contact = () => {
                     >
                       <Box m={8} color="#0B0E3F">
                         <form
-                          method="POST"
+                          ref={form}
                           onSubmit={handleSubmit}
                           style={{
                             display: "flex",
@@ -246,20 +254,16 @@ const Contact = () => {
                                 id="full-name"
                                 type="text"
                                 name="name"
-                                value={form?.name}
+                                value={userInput?.name}
                                 size="md"
                                 placeholder="Your Name"
                                 onChange={handleChange}
                               />
-                              <ValidationError
-                                prefix="Name"
-                                field="name"
-                                errors={state.errors}
-                              />
+                             
                             </InputGroup>
                           </FormControl>
                           <FormControl>
-                            <FormLabel>Mail</FormLabel>
+                            <FormLabel>Email</FormLabel>
                             <InputGroup borderColor="#E0E1E7">
                               <InputLeftElement pointerEvents="none">
                                 <MdOutlineEmail color="gray.800" />
@@ -268,18 +272,14 @@ const Contact = () => {
                                 id="email"
                                 type="email"
                                 name="email"
-                                value={form?.email}
+                                value={userInput?.email}
                                 size="md"
                                 placeholder="Your Email"
                                 required
                                 onChange={handleChange}
                               />
-                              <ValidationError
-                                prefix="Email"
-                                field="email"
-                                errors={state.errors}
-                              />
                             </InputGroup>
+                            {emailError && <Text color={"red"} align={"left"}>{emailError}</Text>}
                           </FormControl>
                           <FormControl>
                             <FormLabel>Message</FormLabel>
@@ -291,15 +291,11 @@ const Contact = () => {
                               }}
                               placeholder="message"
                               name="message"
-                              value={form?.message}
+                              value={userInput?.message}
                               required
                               onChange={handleChange}
                             />
-                            <ValidationError
-                              prefix="Message"
-                              field="message"
-                              errors={state.errors}
-                            />
+                           
                           </FormControl>
                           <FormControl id="submit" float="right">
                             <Button
@@ -312,8 +308,7 @@ const Contact = () => {
                                 borderRadius: "20px",
                               }}
                               rightIcon={<ArrowForwardIcon />}
-                              onClick={handleSendBTN}
-                              isDisabled={state.submitting}
+                              isDisabled={isLoading}
                               isLoading={isLoading}
                             >
                               Send

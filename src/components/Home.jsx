@@ -12,11 +12,7 @@ import {
 import portfolioPic from "../assets/Images/porfolioPic.png";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import {
-  FaDownload,
-  FaEnvelope,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 
 const Home = () => {
@@ -68,7 +64,7 @@ const Home = () => {
     link.download = resumeFilename;
     link.click();
     window.open(
-      "https://drive.google.com/file/d/1sMl6Y29p9labjv5Z55Dep-PFPFG3Opch/view",
+      "https://drive.google.com/drive/u/0/folders/1lQ2NRbQ-t8F22u_haJvQghbvDTIhZvA6",
       "_blank"
     );
   };
@@ -120,9 +116,13 @@ const Home = () => {
               </span>{" "}
               with proficiency in{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                MERN </span>stack.  Swiftly
-                embraces <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>Generative AI</span> and quickly learns new tech
-                stacks. Completed{" "}
+                MERN{" "}
+              </span>
+              stack. Swiftly embraces{" "}
+              <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                Generative AI
+              </span>{" "}
+              and quickly learns new tech stacks. Completed{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
                 1200+
               </span>{" "}
