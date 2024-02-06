@@ -1,0 +1,91 @@
+.card-container {
+  position: relative;
+  width: 600px;
+  height: 390px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 6px white;
+  background: black;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 655px) {
+  .card-container {
+    width: 300px;
+    height: 385px;
+  }
+}
+
+.project-details {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.card-container:hover .project-details {
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+
+.github-button,
+.live-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #03c988;
+  transition: all 0.3s ease-in-out;
+}
+
+.github-button > button,
+.live-button > button {
+  border: none;
+  background-color: inherit;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.github-button {
+  color: white;
+  box-shadow: 0px 0px 5px white;
+}
+
+.github-button > button {
+  color: white;
+}
+
+.live-button {
+  color: #03c988;
+  box-shadow: 0px 0px 5px #03c988;
+}
+
+.live-button > button {
+  color: #03c988;
+}
+
+.live-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #03c988;
+}
+
+.github-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px white;
+}

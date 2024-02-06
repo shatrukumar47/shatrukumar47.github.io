@@ -70,7 +70,12 @@ const Home = () => {
   };
 
   return (
-    <Box id="home" bg={"#0F1624"} color={"white"}>
+    <Box
+      id="home"
+      // bg={"#0F1624"}
+      bg={"linear-gradient(to right, #0f0c29, #302b63, #24243e)"}
+      color={"white"}
+    >
       <Container maxW={"7xl"}>
         <Stack
           align={"center"}
@@ -142,12 +147,12 @@ const Home = () => {
                   variant="ghost"
                   size="lg"
                   isRound={true}
-                  border={"2px solid #00FFFF"}
-                  color={"#00FFFF"}
+                  border={"2px solid white"}
+                  color={"white"}
+                  bg={"#0a66c2"}
                   _hover={{
-                    bg: "#00FFFF",
-                    color: "black",
-                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                    border: "2px solid #0a66c2",
+                    boxShadow: "#0a66c2 0px 0px 10px 5px",
                   }}
                   icon={<FaLinkedinIn size="25px" />}
                   onClick={handleLinkedin}
@@ -156,12 +161,12 @@ const Home = () => {
                   variant="ghost"
                   size="lg"
                   isRound={true}
-                  border={"2px solid #00FFFF"}
-                  color={"#00FFFF"}
+                  border={"2px solid #e8eaea"}
+                  color={"#e8eaea"}
+                  bg={"#1d1b1b"}
                   _hover={{
-                    bg: "#00FFFF",
-                    color: "black",
-                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                    border: "2px solid #e8eaea",
+                    boxShadow: "#e8eaea 0px 0px 10px 5px",
                   }}
                   icon={<BsGithub size="25px" />}
                   onClick={handleGithub}
@@ -170,12 +175,13 @@ const Home = () => {
                   variant="ghost"
                   size="lg"
                   isRound={true}
-                  border={"2px solid #00FFFF"}
-                  color={"#00FFFF"}
+                  border={"2px solid white"}
+                  color={"white"}
+                  bg={"#37AE48"}
                   _hover={{
-                    bg: "#00FFFF",
-                    color: "black",
-                    boxShadow: "#00FFFF 0px 0px 10px 5px",
+                    color: "white",
+                    border: "2px solid #37AE48",
+                    boxShadow: "#37AE48 0px 0px 10px 5px",
                   }}
                   icon={<FaEnvelope size="22px" />}
                   onClick={handleEmail}

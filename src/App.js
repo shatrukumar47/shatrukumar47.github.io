@@ -1,19 +1,17 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Particle from "./components/Particle";
-import GithubOverview from "./components/GithubOverview";
-import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./Sections/Navbar";
+import Home from "./Sections/Home";
+import About from "./Sections/About";
+import Skills from "./Sections/Skills";
+import Projects from "./Sections/Projects";
+import Contact from "./Sections/Contact";
+import GithubOverview from "./Sections/GithubOverview";
+import ScrollToTop from "./Sections/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Particle /> */}
       <Home />
       <About />
       <Skills />

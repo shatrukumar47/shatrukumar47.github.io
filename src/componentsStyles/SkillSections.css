@@ -1,0 +1,16 @@
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-container > h1 {
+  color: #00ffff;
+  font-size: 20px;
+}
+
+.section-container > .section-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

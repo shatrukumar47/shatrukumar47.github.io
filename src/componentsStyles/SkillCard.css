@@ -1,0 +1,58 @@
+.skillcard-container {
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1624;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.skillcard-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 4px #00ffff;
+}
+
+.skillcard-container::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 200%;
+  background: linear-gradient(to right, #ff00cc, #333399);
+}
+
+.skillcard-container::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: inherit;
+  border-radius: 8px;
+}
+
+.skillcard-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 10px 20px 10px 20px;
+  z-index: 2;
+}
+.skillcard-container .skillcard-image {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+.skillcard-container .skillcard-image > img {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0px 0px 1px black);
+}
+
+.skillcard-container .skillcard-content > p {
+  color: white;
+  text-align: left;
+}

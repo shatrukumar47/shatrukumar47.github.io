@@ -33,8 +33,8 @@ import quanta2 from "../assets/projects/qunata/2.png";
 import quanta3 from "../assets/projects/qunata/3.png";
 
 //Pill Alert
-import PA1 from "../assets/projects/Pill Alert/1.png";
-import PA2 from "../assets/projects/Pill Alert/2.png";
+// import PA1 from "../assets/projects/Pill Alert/1.png";
+// import PA2 from "../assets/projects/Pill Alert/2.png";
 
 export const projects = [
   {
@@ -43,21 +43,17 @@ export const projects = [
     description:
       "Welcome to our notes-taking application – the perfect tool to streamline your note-taking experience! Our user-friendly platform allows you to effortlessly create, update, and delete notes, ensuring that you have complete control over your information.",
     techStacks: [
-      "HTML5",
-      "CSS3",
       "Javascript",
       "React",
       "Redux",
       "Chakra UI",
-      "Thunk",
-      "Axios",
       "Node JS",
       "Express JS",
       "MongoDB",
       "Mongoose",
-      "Bcrypt",
-      "JsonWebToken",
-      "Nodemailer"
+      "bcrypt",
+      "JWT",
+      "Nodemailer",
     ],
     githublink:
       "https://github.com/shatrukumar47/Full-Stack-Notes-Mini-Project",
@@ -67,52 +63,85 @@ export const projects = [
   {
     images: [RR1, RR2, RR3, RR4, RR5, RR6, RR7, RR8, RR9, RR10, RR11],
     title: "Read Right",
-    description: "Welcome to Read Right, an advanced online platform that seamlessly integrates a feature-rich bookstore with a vibrant reading community. Explore, purchase, and engage with books while fostering a community-driven environment for discussions, reviews, and recommendations.",
-    techStacks: ['Angular',"Tailwind CSS", "HTML5", "CSS3", "Javascript", "Nodejs", "Express JS", "MongoDB", "Mongoose", "bcrypt", "jwt", "OpenAI"],
+    description:
+      "Welcome to Read Right, an advanced online platform that seamlessly integrates a feature-rich bookstore with a vibrant reading community. Explore, purchase, and engage with books while fostering a community-driven environment for discussions, reviews, and recommendations.",
+    techStacks: [
+      "Angular",
+      "Tailwind CSS",
+      "Javascript",
+      "Nodejs",
+      "Express JS",
+      "MongoDB",
+      "Mongoose",
+      "bcrypt",
+      "JWT",
+      "OpenAI",
+    ],
     githublink: "https://github.com/shatrukumar47/Read-Right",
     livelink: "https://read-right-shatru.vercel.app/",
   },
 
   {
-    images: [ CC1 ],
+    images: [CC1],
     title: "Code Converter",
-    description: "A web tool for code conversion between programming languages, debugging, and code quality checks. Simplify coding tasks and enhance your development workflow.",
-    techStacks: [ "React", "Chakra UI","HTML5", "CSS3", "Javascript", "Nodejs", "Express JS", "OpenAI", "Octokit", "Github API"],
+    description:
+      "A web tool for code conversion between programming languages, debugging, and code quality checks. Simplify coding tasks and enhance your development workflow.",
+    techStacks: [
+      "React",
+      "Chakra UI",
+      "Javascript",
+      "Nodejs",
+      "Express JS",
+      "OpenAI",
+      "Octokit",
+      "Github API",
+    ],
     githublink: "https://github.com/shatrukumar47/Code-Converter",
     livelink: "https://shatrucodeconverter.netlify.app/",
   },
 
+  // {
+  //   images: [ PA1, PA2],
+  //   title: "Pill Alert",
+  //   description:
+  //     "Welcome to Pill Alert! This project is dedicated to simplifying medication management. Our mission is to help users track and manage their medications effectively by setting reminder to take pill on time.",
+  //   techStacks: ["HTML5", "CSS3", "Javascript", "React", "Chakra UI"],
+  //   githublink: "https://github.com/shatrukumar47/unwavering-squirrel-8299",
+  //   livelink: "https://tangerine-dusk-0353ff.netlify.app/",
+  // },
 
   {
-    images: [ PA1, PA2],
-    title: "Pill Alert",
-    description:
-      "Welcome to Pill Alert! This project is dedicated to simplifying medication management. Our mission is to help users track and manage their medications effectively by setting reminder to take pill on time.",
-    techStacks: ["HTML5", "CSS3", "Javascript", "React", "Chakra UI"],
-    githublink: "https://github.com/shatrukumar47/unwavering-squirrel-8299",
-    livelink: "https://tangerine-dusk-0353ff.netlify.app/",
-  },
-
-  {
-    images: [ GC1, GC2, GC3, GC4],
+    images: [GC1, GC2, GC3, GC4],
     title: "Gen Chat",
     description:
       "The Gen Chat App is a full-stack web application that leverages the power of artificial intelligence and natural language processing to provide a range of text-related features. It assist users in generating, summarizing, translating, and performing Multilingual Sentiment Analysis on text content.",
-    techStacks: ["React", "Chakra UI","HTML5", "CSS3", "Javascript", "Nodejs", "Express JS", "OpenAI"],
+    techStacks: [
+      "React",
+      "Chakra UI",
+      "Javascript",
+      "Nodejs",
+      "Express JS",
+      "OpenAI",
+    ],
     githublink: "https://github.com/shatrukumar47/AI-Content-Generation-App",
     livelink: "https://shatrugenchat.netlify.app/",
   },
 
-  
   {
-    images: [ quanta1, quanta2, quanta3],
+    images: [quanta1, quanta2, quanta3],
     title: "Quanta",
     description:
       "Quanta is an innovative interview platform that leverages the power of generative AI to revolutionize the way individuals prepare for interviews across various categories. Users can simulate interviews in their chosen field, receive real-time feedback, and gain valuable insights into their performance",
-    techStacks: ["React", "Tailwind CSS","HTML5", "CSS3", "Javascript", "Nodejs", "Express JS", "OpenAI"],
+    techStacks: [
+      "React",
+      "Tailwind CSS",
+
+      "Javascript",
+      "Nodejs",
+      "Express JS",
+      "OpenAI",
+    ],
     githublink: "https://github.com/Hasims2001/quanta",
     livelink: "https://enchanting-truffle-893185.netlify.app/",
   },
-
-  
 ];

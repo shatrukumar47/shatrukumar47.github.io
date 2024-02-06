@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Container,
   Flex,
@@ -24,12 +24,11 @@ import {
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson } from "react-icons/bs";
 import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import { ArrowForwardIcon} from "@chakra-ui/icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-
   const [userInput, setUserInput] = useState({
     name: "",
     email: "",
@@ -41,68 +40,77 @@ const Contact = () => {
   //Toast feature
   const toast = useToast();
 
-  
-  
   //handleChange
   const handleChange = (e) => {
     const { value, name } = e.target;
-    if(name === "email"){
+    if (name === "email") {
       checkEmailValidation(value);
     }
     setUserInput((prev) => {
       return { ...prev, [name]: value };
     });
   };
-  
+
   //checkEmailValidation
-  const checkEmailValidation = (email)=>{
+  const checkEmailValidation = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const msg = emailRegex.test(email) ? "" : "enter valid email address";
-    setEmailError(msg)
-  }
-
+    setEmailError(msg);
+  };
 
   // handleSendBTN
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (userInput?.name && userInput?.email && !emailError && userInput?.message) {
+    if (
+      userInput?.name &&
+      userInput?.email &&
+      !emailError &&
+      userInput?.message
+    ) {
       setIsLoading(true);
-      emailjs.sendForm(process.env.REACT_APP_serviceID, process.env.REACT_APP_templateID , form.current, process.env.REACT_APP_publicKey)
-      .then((result) => {
-          console.log(result.text);
-          toast({
-            title: `Message Sent`,
-            description:
-              "Thank you for reaching out. I'll get back to you shortly.",
-            position: "top",
-            status: "success",
-            duration: 3000,
-            isClosable: true,
-          });
-          setIsLoading(false);
-          setUserInput({
-            name: "",
-            email: "",
-            message: "",
-          });
-      }, (error) => {
-          console.log(error.text);
-          toast({
-            title: `Network error`,
-            description:
-              "Something went wrong. Sorry for your inconvenience. Please contact me using other provided sources.",
-            position: "top",
-            status: "error",
-            duration: 2000,
-            isClosable: true,
-          });
-          setIsLoading(false);
-      });
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_serviceID,
+          process.env.REACT_APP_templateID,
+          form.current,
+          process.env.REACT_APP_publicKey
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            toast({
+              title: `Message Sent`,
+              description:
+                "Thank you for reaching out. I'll get back to you shortly.",
+              position: "top",
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+            });
+            setIsLoading(false);
+            setUserInput({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.log(error.text);
+            toast({
+              title: `Network error`,
+              description:
+                "Something went wrong. Sorry for your inconvenience. Please contact me using other provided sources.",
+              position: "top",
+              status: "error",
+              duration: 2000,
+              isClosable: true,
+            });
+            setIsLoading(false);
+          }
+        );
     }
-
   };
 
- 
   //Linkedin
   const handleLinkedin = () => {
     window.open(
@@ -187,9 +195,8 @@ const Contact = () => {
                         id="contact-linkedin"
                         variant="ghost"
                         size="lg"
-                        color={"#C651CD"}
-                        isRound={true}
-                        _hover={{ bg: "#F74343", color: "white" }}
+                        _hover={{ bg: "#0a66c2", color: "white" }}
+                        color="#0a66c2"
                         icon={<FaLinkedinIn size="28px" />}
                         onClick={handleLinkedin}
                       />
@@ -197,27 +204,27 @@ const Contact = () => {
                         id="contact-github"
                         variant="ghost"
                         size="lg"
-                        color={"#C651CD"}
+                        color={"white"}
                         isRound={true}
-                        _hover={{ bg: "#F74343", color: "white" }}
+                        _hover={{ bg: "white", color: "black" }}
                         icon={<BsGithub size="28px" />}
                         onClick={handleGithub}
                       />
                       <IconButton
                         variant="ghost"
                         size="lg"
-                        color={"#C651CD"}
+                        color={"#37AE48"}
                         isRound={true}
-                        _hover={{ bg: "#F74343", color: "white" }}
+                        _hover={{ bg: "#37AE48", color: "white" }}
                         icon={<FaPhoneAlt size="28px" />}
                         onClick={handlePhone}
                       />
                       <IconButton
                         variant="ghost"
                         size="lg"
-                        color={"#C651CD"}
-                        isRound={true}
-                        _hover={{ bg: "#F74343", color: "white" }}
+                        color={"#0FC2C5"}
+                        // isRound={true}
+                        _hover={{ bg: "#0FC2C5", color: "white" }}
                         icon={<FaEnvelope size="28px" />}
                         onClick={handleEmail}
                       />
@@ -259,7 +266,6 @@ const Contact = () => {
                                 placeholder="Your Name"
                                 onChange={handleChange}
                               />
-                             
                             </InputGroup>
                           </FormControl>
                           <FormControl>
@@ -279,7 +285,11 @@ const Contact = () => {
                                 onChange={handleChange}
                               />
                             </InputGroup>
-                            {emailError && <Text color={"red"} align={"left"}>{emailError}</Text>}
+                            {emailError && (
+                              <Text color={"red"} align={"left"}>
+                                {emailError}
+                              </Text>
+                            )}
                           </FormControl>
                           <FormControl>
                             <FormLabel>Message</FormLabel>
@@ -295,7 +305,6 @@ const Contact = () => {
                               required
                               onChange={handleChange}
                             />
-                           
                           </FormControl>
                           <FormControl id="submit" float="right">
                             <Button
@@ -324,10 +333,9 @@ const Contact = () => {
           </Box>
         </Flex>
         <VStack marginBottom={"30px"}>
-          <Image src={robotGif} />
           <HStack color={"white"} justifyContent={"center"}>
-            <Text>Made with </Text> <FaHeart color="red" /> <Text>By</Text>{" "}
-            <Text color={"#C651CD"}>Shatrughan Kumar</Text>
+            <Text>Made with </Text> <FaHeart className="contact-heart-icon" />{" "}
+            <Text>By</Text> <Text color={"#C651CD"}>Shatrughan Kumar</Text>
           </HStack>
         </VStack>
       </div>

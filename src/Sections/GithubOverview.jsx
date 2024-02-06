@@ -4,8 +4,9 @@ import GitHubCalendar from "react-github-calendar";
 
 const GithubOverview = () => {
   return (
-    <Box bg={"#0F1624"} 
-    // padding={"0px 0px 0px 0px"}
+    <Box
+      bg={"#0F1624"}
+      // padding={"0px 0px 0px 0px"}
     >
       <div data-aos="fade-up">
         <HStack justifyContent={"center"} marginBottom={"50px"}>
@@ -23,9 +24,7 @@ const GithubOverview = () => {
               bg={"#095c80"}
               marginBottom={"50px"}
               borderRadius={"20px"}
-              boxShadow={
-                "rgb(84, 25, 178) 0px 15px 25px, rgb(26, 201, 47) 0px 5px 10px"
-              }
+              boxShadow={"0px 0px 10px black"}
               transition={".3s ease-in-out 0s"}
               _hover={{
                 transform: "scale(1.03)",

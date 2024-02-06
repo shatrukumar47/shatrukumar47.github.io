@@ -101,8 +101,16 @@ const Navbar = () => {
             spacing={"15px"}
             marginLeft={{ base: "30px", md: "30px", lg: "20px" }}
           >
-            <FaLinkedinIn className="nav-icon" onClick={handleLinkedin} />
-            <FaGithub className="nav-icon" onClick={handleGithub} />
+            <FaLinkedinIn
+              className="nav-icon"
+              color="#0a66c2"
+              onClick={handleLinkedin}
+            />
+            <FaGithub
+              className="nav-icon"
+              color="#fafafa"
+              onClick={handleGithub}
+            />
           </HStack>
           <HStack
             display={{ base: "none", md: "flex", lg: "flex" }}

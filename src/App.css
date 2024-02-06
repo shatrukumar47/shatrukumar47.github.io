@@ -7,6 +7,7 @@
 #nav-menu {
   color: #00ffff;
   background: #0f1624;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 
 .active {
@@ -25,9 +26,9 @@
   font-size: 20px;
   transition: font-size 0.3s ease-in-out;
 }
+
 .nav-icon:hover {
   cursor: pointer;
-  color: #f74343;
   font-size: 30px;
 }
 
@@ -81,7 +82,7 @@
 .scroll-btn-icon {
   border-radius: 50%;
   padding: 5px;
-  box-shadow: #00ffff 0px 0px 10px 5px;
+  box-shadow: #00ffff 0px 0px 5px 2px;
   border: 2px solid #00ffff;
   animation: gototop 1.2s linear infinite alternate-reverse;
 }
@@ -108,23 +109,36 @@
   }
 }
 
-
 body::-webkit-scrollbar {
   width: 10px;
 }
 body::-webkit-scrollbar-thumb {
-  background: #00FFFF;
+  background: #00ffff;
   border-radius: 50%;
 }
 
 body {
   scrollbar-width: thin;
-  scrollbar-color: #00FFFF #C651CD;
+  scrollbar-color: #00ffff #c651cd;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #00FFFF;
+  background-color: #00ffff;
   border-radius: 6px;
 }
 body::-webkit-scrollbar-track {
-  background-color: #C651CD;
+  background-color: #c651cd;
+}
+
+.contact-heart-icon {
+  color: red;
+  animation: beatingHeart 0.3s linear infinite alternate-reverse;
+}
+
+@keyframes beatingHeart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
