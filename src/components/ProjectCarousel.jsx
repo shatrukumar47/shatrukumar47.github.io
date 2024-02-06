@@ -101,9 +101,10 @@ const ProjectCarousel = ({ slides, w, h, dotSize, infinity, delay }) => {
         {"<"}
       </div>
       <div style={styles.slider}>
-        {slides?.map((img) => {
+        {slides?.map((img, index) => {
           return (
             <div
+              key={index}
               style={{
                 ...styles.slide,
                 backgroundImage: `url(${img})`,
