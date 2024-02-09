@@ -19,12 +19,7 @@ AOS.init();
 
 const About = () => {
   return (
-    <Box
-      id="about"
-      className="about section"
-      bg={"#1E1842"}
-      // padding={"120px 0px 0px 0px"}
-    >
+    <Box id="about" className="about section" bg={"#1E1842"}>
       <div data-aos="fade-up">
         <Container maxW={{ base: "90%", md: "90%", lg: "8xl" }} padding={"0px"}>
           <HStack justifyContent={"center"} marginBottom={"50px"}>
@@ -62,9 +57,9 @@ const About = () => {
                     As an outcome-driven Full Stack Web Developer, I bring my
                     expertise in both Frontend & Backend, acquired through
                     rigorous training at Masai School. With a portfolio
-                    showcasing successful web applications and some major and minor
-                    projects, I have developed strong teamwork and communication
-                    skills.
+                    showcasing successful web applications and some major and
+                    minor projects, I have developed strong teamwork and
+                    communication skills.
                   </Text>
                 </HStack>
               </div>

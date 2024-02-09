@@ -72,7 +72,6 @@ const Home = () => {
   return (
     <Box
       id="home"
-      // bg={"#0F1624"}
       bg={"linear-gradient(to right, #0f0c29, #302b63, #24243e)"}
       color={"white"}
     >
