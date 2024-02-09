@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import portfolioPic from "../assets/Images/porfolioPic.png";
+import portfolioPic from "../assets/PortfolioPic/2.png";
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { FaDownload, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
