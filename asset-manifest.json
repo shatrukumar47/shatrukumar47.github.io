@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8abae640.css",
-    "main.js": "/static/js/main.4517e675.js",
-    "static/media/porfolioPic.png": "/static/media/porfolioPic.59d0a0027e0fecaa6e72.png",
+    "main.js": "/static/js/main.a57fe96f.js",
     "static/media/aboutAnime.gif": "/static/media/aboutAnime.37ef1e1a376ff1b6c967.gif",
     "static/media/1.png": "/static/media/1.dcfb6ff7c33dd3d73108.png",
     "static/media/3.png": "/static/media/3.35a9a4ee63909d1e8970.png",
@@ -26,10 +25,10 @@
     "static/media/css.png": "/static/media/css.bea56c054124d4888194.png",
     "index.html": "/index.html",
     "main.8abae640.css.map": "/static/css/main.8abae640.css.map",
-    "main.4517e675.js.map": "/static/js/main.4517e675.js.map"
+    "main.a57fe96f.js.map": "/static/js/main.a57fe96f.js.map"
   },
   "entrypoints": [
     "static/css/main.8abae640.css",
-    "static/js/main.4517e675.js"
+    "static/js/main.a57fe96f.js"
   ]
 }
