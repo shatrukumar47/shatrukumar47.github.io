@@ -68,7 +68,7 @@ const Navbar = () => {
     link.download = resumeFilename;
     link.click();
     window.open(
-      "https://drive.google.com/drive/u/0/folders/1lQ2NRbQ-t8F22u_haJvQghbvDTIhZvA6",
+      "https://drive.google.com/file/d/1YsBoZgyYwhxL6HTriDpz-cVPs2G_ah_m/view",
       "_blank"
     );
   };
