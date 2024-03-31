@@ -13,20 +13,30 @@ import Postman from "../assets/Images/Postman.png";
 import Github from "../assets/Images/Github.png";
 import Angular from "../assets/Images/angular.png";
 import Tailwind from "../assets/Images/tailwind css.png";
-import PromptEngineering from "../assets/Images/prompt engineering.png";
+import PromptEngineering from "../assets/Images/prompt.png";
 import styledComponent from "../assets/Images/styledcomponent.png";
+import Nextjs from "../assets/Images/nextjs.png";
+import ReactQuery from "../assets/Images/react-query.png";
+import NestJs from "../assets/Images/nestjs.png";
+import ReactHookForm from "../assets/Images/react-hook-form.png";
+import Zustand from "../assets/Images/zustand.png";
+import GitLab from "../assets/Images/gitlab-logo.png";
 
 export const techSkills = [
   {
     section: "Frontend",
     skills: [
-      { title: "HTML", image: HTML },
-      { title: "CSS", image: CSS },
+      // { title: "HTML", image: HTML },
+      // { title: "CSS", image: CSS },
       { title: "JavaScript", image: JavaScript },
       { title: "React", image: ReactLogo },
       { title: "Redux", image: Redux },
       { title: "Angular", image: Angular },
       { title: "Typescript", image: Typescript },
+      { title: "Nextjs", image: Nextjs },
+      { title: "React Query", image: ReactQuery },
+      { title: "React-Hook-Form", image: ReactHookForm },
+      { title: "Zustand", image: Zustand },
     ],
   },
   {
@@ -42,6 +52,7 @@ export const techSkills = [
     skills: [
       { title: "Node JS", image: nodejs },
       { title: "Express JS", image: ExpressJS },
+      { title: "NestJS", image: NestJs },
     ],
   },
   {
@@ -53,10 +64,8 @@ export const techSkills = [
     skills: [
       { title: "Postman", image: Postman },
       { title: "Github", image: Github },
+      { title: "GitLab", image: GitLab },
+      { title: "Prompt Engineering", image: PromptEngineering }
     ],
-  },
-  {
-    section: "Additional Skills",
-    skills: [{ title: "Prompt Engineering", image: PromptEngineering }],
-  },
+  }
 ];

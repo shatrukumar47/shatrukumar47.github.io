@@ -110,22 +110,22 @@ export const projects = [
   //   livelink: "https://tangerine-dusk-0353ff.netlify.app/",
   // },
 
-  {
-    images: [GC1, GC2, GC3, GC4],
-    title: "Gen Chat",
-    description:
-      "The Gen Chat App is a full-stack web application that leverages the power of artificial intelligence and natural language processing to provide a range of text-related features. It assist users in generating, summarizing, translating, and performing Multilingual Sentiment Analysis on text content.",
-    techStacks: [
-      "React",
-      "Chakra UI",
-      "Javascript",
-      "Nodejs",
-      "Express JS",
-      "OpenAI",
-    ],
-    githublink: "https://github.com/shatrukumar47/AI-Content-Generation-App",
-    livelink: "https://shatrugenchat.netlify.app/",
-  },
+  // {
+  //   images: [GC1, GC2, GC3, GC4],
+  //   title: "Gen Chat",
+  //   description:
+  //     "The Gen Chat App is a full-stack web application that leverages the power of artificial intelligence and natural language processing to provide a range of text-related features. It assist users in generating, summarizing, translating, and performing Multilingual Sentiment Analysis on text content.",
+  //   techStacks: [
+  //     "React",
+  //     "Chakra UI",
+  //     "Javascript",
+  //     "Nodejs",
+  //     "Express JS",
+  //     "OpenAI",
+  //   ],
+  //   githublink: "https://github.com/shatrukumar47/AI-Content-Generation-App",
+  //   livelink: "https://shatrugenchat.netlify.app/",
+  // },
 
   {
     images: [quanta1, quanta2, quanta3],

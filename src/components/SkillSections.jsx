@@ -1,6 +1,6 @@
 import React from "react";
 import "../componentsStyles/SkillSections.css";
-import SkillCards from "./SkillCards";
+import SkillCard from "./SkillCard";
 
 const SkillSections = ({ item }) => {
   return (
@@ -9,7 +9,7 @@ const SkillSections = ({ item }) => {
       <div className="section-skills">
         {item?.skills?.map((skill, index) => {
           return (
-            <SkillCards key={index} image={skill?.image} title={skill?.title} />
+            <SkillCard key={index} image={skill?.image} title={skill?.title} />
           );
         })}
       </div>

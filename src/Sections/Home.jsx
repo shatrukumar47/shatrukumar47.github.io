@@ -14,6 +14,7 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { FaDownload, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
+import ResumeButton from "../components/ResumeButton";
 
 const Home = () => {
   const typedRef = useRef(null);
@@ -58,7 +59,7 @@ const Home = () => {
   const handleResume = () => {
     const resumeFilename = "Shatrughan-Kumar-Resume.pdf"; // Make sure this matches the filename in the public folder
     const resumeURL =
-      process.env.PUBLIC_URL + "/Resume/" + "Shatrughan-Kumar-Resume.pdf";
+      process.env.PUBLIC_URL + "/Resume/Shatrughan-Kumar-Resume.pdf";
     const link = document.createElement("a");
     link.href = resumeURL;
     link.download = resumeFilename;
@@ -77,12 +78,12 @@ const Home = () => {
     >
       <Container maxW={"7xl"}>
         <Stack
-          align={"center"}
+          // align={"center"}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}
           direction={{ base: "column", md: "row" }}
         >
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Stack flex={1} spacing={{ base: 5, md: 10 }} mt={-10}>
             <Heading
               lineHeight={1.1}
               fontWeight={600}
@@ -164,8 +165,8 @@ const Home = () => {
                   color={"#e8eaea"}
                   bg={"#1d1b1b"}
                   _hover={{
-                    border: "2px solid #e8eaea",
-                    boxShadow: "#e8eaea 0px 0px 10px 5px",
+                    border: "2px solid #1d1b1b",
+                    boxShadow: "#1d1b1b 0px 0px 10px 5px",
                   }}
                   icon={<BsGithub size="25px" />}
                   onClick={handleGithub}
@@ -186,22 +187,9 @@ const Home = () => {
                   onClick={handleEmail}
                 />
               </HStack>
-              <Button
-                href="#resume"
-                className="nav-link resume"
-                id="resume-button-2"
-                color="#C651CD"
-                border={"1px solid #C651CD"}
-                variant={"outline"}
-                transition={"border-radius 0.3s ease-in-out"}
-                _hover={{
-                  borderRadius: "20px",
-                }}
-                rightIcon={<FaDownload />}
-                onClick={handleResume}
-              >
-                Resume
-              </Button>
+              <Box mt={2}>
+                <ResumeButton onClick={handleResume} />
+              </Box>
             </Stack>
           </Stack>
 

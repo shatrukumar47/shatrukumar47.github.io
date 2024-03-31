@@ -20,7 +20,7 @@ const Skills = () => {
           gridTemplateColumns={{
             base: "repeat(1, 1fr)",
             md: "repeat(2,1fr)",
-            lg: "repeat(6, 1fr)",
+            lg: "repeat(5, 1fr)",
           }}
           gap={"20px"}
           maxW={"95%"}
