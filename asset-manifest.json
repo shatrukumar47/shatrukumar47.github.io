@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5441f891.css",
-    "main.js": "/static/js/main.a57fe96f.js",
+    "main.css": "/static/css/main.37fd6adc.css",
+    "main.js": "/static/js/main.6c4dd781.js",
     "static/media/aboutAnime.gif": "/static/media/aboutAnime.37ef1e1a376ff1b6c967.gif",
     "static/media/1.png": "/static/media/1.dcfb6ff7c33dd3d73108.png",
     "static/media/3.png": "/static/media/3.35a9a4ee63909d1e8970.png",
@@ -16,19 +16,23 @@
     "static/media/10.png": "/static/media/10.1e19d02d95dd4bf7228e.png",
     "static/media/5.png": "/static/media/5.7c9c5d89b1e0824897b4.png",
     "static/media/ndoejs.png": "/static/media/ndoejs.dbf5d143917b5b366625.png",
+    "static/media/zustand.png": "/static/media/zustand.016f007216940a255c8c.png",
     "static/media/html.png": "/static/media/html.ca57c97f9a27615d4082.png",
     "static/media/styledcomponent.png": "/static/media/styledcomponent.b2a4278ae5017d1bc15f.png",
     "static/media/chakra.png": "/static/media/chakra.4112242f6e4c9a5b203d.png",
+    "static/media/ExpressJS.png": "/static/media/ExpressJS.39a0f4c3d981885c64f8.png",
     "static/media/angular.png": "/static/media/angular.46d1daffb29e0a57f8f1.png",
     "static/media/js.png": "/static/media/js.310d665e5ee727f00229.png",
     "static/media/react.png": "/static/media/react.60f87e57897ede715c07.png",
     "static/media/css.png": "/static/media/css.bea56c054124d4888194.png",
+    "static/media/prompt.png": "/static/media/prompt.f1598344663453154ccb.png",
+    "static/media/react-query.png": "/static/media/react-query.90f4864355d5b17c85de.png",
     "index.html": "/index.html",
-    "main.5441f891.css.map": "/static/css/main.5441f891.css.map",
-    "main.a57fe96f.js.map": "/static/js/main.a57fe96f.js.map"
+    "main.37fd6adc.css.map": "/static/css/main.37fd6adc.css.map",
+    "main.6c4dd781.js.map": "/static/js/main.6c4dd781.js.map"
   },
   "entrypoints": [
-    "static/css/main.5441f891.css",
-    "static/js/main.a57fe96f.js"
+    "static/css/main.37fd6adc.css",
+    "static/js/main.6c4dd781.js"
   ]
 }
