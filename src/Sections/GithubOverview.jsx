@@ -56,13 +56,15 @@ const GithubOverview = () => {
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=shatrukumar47&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact"
                 id="github-top-langs"
                 width={"350px"}
-                boxShadow={
-                  "rgb(255, 255, 255) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
-                }
+               
                 transition={".3s ease-in-out 0s"}
                 _hover={{
                   transform: "scale(1.03)",
                 }}
+                
+                alt="github-language-stats"
+                title="github-language-stats"
+                loading="lazy"
               />
             </div>
 
@@ -70,13 +72,14 @@ const GithubOverview = () => {
               <Image
                 src="https://github-readme-streak-stats.herokuapp.com/?user=shatrukumar47&theme=dark&hide_border=false"
                 id="github-streak-stats"
-                boxShadow={
-                  "rgb(255, 255, 255) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
-                }
+               
                 transition={".3s ease-in-out 0s"}
                 _hover={{
                   transform: "scale(1.03)",
                 }}
+                alt="github-project-contribution-stats"
+                title="github-project-contribution-stats"
+                loading={"lazy"}
               />
             </div>
 
@@ -91,6 +94,10 @@ const GithubOverview = () => {
                 _hover={{
                   transform: "scale(1.03)",
                 }}
+                alt="github-total-stats"
+                title="github-total-stats"
+                loading={"lazy"}
+
               />
             </div>
           </Box>

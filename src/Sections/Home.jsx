@@ -85,6 +85,7 @@ const Home = () => {
         >
           <Stack flex={1} spacing={{ base: 5, md: 10 }} mt={-10}>
             <Heading
+              as={"h1"}
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
@@ -202,7 +203,10 @@ const Home = () => {
                 <img
                   className="home-img"
                   src={portfolioPic}
+                  width={"600px"}
+                  height={"600px"}
                   alt="profile-pic"
+                  title="shatrughan-kumar-profile-photo"
                 />
               </div>
             </Box>

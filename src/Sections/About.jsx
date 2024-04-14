@@ -12,6 +12,8 @@ import React from "react";
 import aboutAnime from "../assets/Images/aboutAnime.gif";
 import { FaReact } from "react-icons/fa";
 
+
+
 //AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -34,7 +36,7 @@ const About = () => {
             direction={{ base: "column", md: "column", lg: "row" }}
             spacing={"20px"}
           >
-            <Image src={aboutAnime} />
+            <Image src={aboutAnime} alt="about-gif" title="about-section-gif" loading="lazy" w={{base: "288px", md: "600px", lg:"800px"}} h={{base: "180px", md: "350px", lg:"466px"}} />
             <VStack
               spacing={"20px"}
               w={{ base: "100%", md: "80%", lg: "90%" }}

@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 const SkillSections = ({ item }) => {
   return (
     <div className="section-container">
-      <h1>{item?.section}</h1>
+      <h2>{item?.section}</h2>
       <div className="section-skills">
         {item?.skills?.map((skill, index) => {
           return (
