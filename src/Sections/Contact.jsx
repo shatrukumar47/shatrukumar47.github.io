@@ -27,6 +27,7 @@ import { FaEnvelope, FaHeart, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import robotGif from "./robotGif.gif";
 import emailjs from "@emailjs/browser";
+import { GithubLink, LinkedLink } from "../constants";
 
 const Contact = () => {
   const [userInput, setUserInput] = useState({
@@ -113,15 +114,12 @@ const Contact = () => {
 
   //Linkedin
   const handleLinkedin = () => {
-    window.open(
-      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
-      "_blank"
-    );
+    window.open(LinkedLink,"_blank");
   };
 
   //handleGithub
   const handleGithub = () => {
-    window.open("https://github.com/shatrukumar47", "_blank");
+    window.open(GithubLink, "_blank");
   };
 
   //handleEmail
@@ -179,7 +177,7 @@ const Contact = () => {
                         <HStack>
                           <MdLocationOn color="#F74343" size="20px" />
                           <Text size="md" color="#DCE2FF">
-                            Noida, Uttar Pradesh, India
+                            Jaipur, Rajasthan, India
                           </Text>
                         </HStack>
                       </VStack>
@@ -334,7 +332,7 @@ const Contact = () => {
         </Flex>
         <VStack marginBottom={"30px"}>
           <HStack color={"white"} justifyContent={"center"}>
-            <Text>Made with </Text> <FaHeart className="contact-heart-icon" />{" "}
+            <Text>Made</Text>
             <Text>By</Text> <Text color={"#C651CD"}>Shatrughan Kumar</Text>
           </HStack>
         </VStack>

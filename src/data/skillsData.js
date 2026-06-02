@@ -1,71 +1,78 @@
-//Images
-import HTML from "../assets/Images/html.png";
-import CSS from "../assets/Images/css.png";
-import JavaScript from "../assets/Images/js.png";
-import ReactLogo from "../assets/Images/react.png";
-import Redux from "../assets/Images/Redux.png";
-import Chakra from "../assets/Images/chakra.png";
-import Typescript from "../assets/Images/Typescript.png";
-import mongoDB from "../assets/Images/mongoDB.png";
-import ExpressJS from "../assets/Images/ExpressJS.png";
-import nodejs from "../assets/Images/ndoejs.png";
-import Postman from "../assets/Images/Postman.png";
-import Github from "../assets/Images/Github.png";
-import Angular from "../assets/Images/angular.png";
-import Tailwind from "../assets/Images/tailwind css.png";
-import PromptEngineering from "../assets/Images/prompt.png";
-import styledComponent from "../assets/Images/styledcomponent.png";
-import Nextjs from "../assets/Images/nextjs.png";
-import ReactQuery from "../assets/Images/react-query.png";
-import NestJs from "../assets/Images/nestjs.png";
-import ReactHookForm from "../assets/Images/react-hook-form.png";
-import Zustand from "../assets/Images/zustand.png";
-import GitLab from "../assets/Images/gitlab-logo.png";
-
 export const techSkills = [
-  {
-    section: "Frontend",
-    skills: [
-      // { title: "HTML", image: HTML },
-      // { title: "CSS", image: CSS },
-      { title: "JavaScript", image: JavaScript },
-      { title: "React", image: ReactLogo },
-      { title: "Redux", image: Redux },
-      { title: "Angular", image: Angular },
-      { title: "Typescript", image: Typescript },
-      { title: "Nextjs", image: Nextjs },
-      { title: "React Query", image: ReactQuery },
-      { title: "React-Hook-Form", image: ReactHookForm },
-      { title: "Zustand", image: Zustand },
-    ],
-  },
-  {
-    section: "UI Frameworks",
-    skills: [
-      { title: "Tailwind CSS", image: Tailwind },
-      { title: "Chakra UI", image: Chakra },
-      { title: "Styled Components", image: styledComponent },
-    ],
-  },
   {
     section: "Backend",
     skills: [
-      { title: "Node JS", image: nodejs },
-      { title: "Express JS", image: ExpressJS },
-      { title: "NestJS", image: NestJs },
+      { title: "Node.js" },
+      { title: "NestJS" },
+      { title: "REST APIs" },
+      { title: "JWT" },
+      { title: "Passport" },
+      { title: "RBAC" },
+      { title: "Socket.IO" }
+    ],
+  },
+  {
+    section: "AI & Search",
+    skills: [
+      { title: "OpenAI APIs" },
+      { title: "Large Language Models (LLMs)" },
+      { title: "Vector Embeddings" },
+      { title: "Semantic Search" },
+      { title: "Retrieval Systems" },
+      { title: "Elasticsearch" }
+    ],
+  },
+  {
+    section: "Core Competencies",
+    skills: [
+      { title: "System Design" },
+      { title: "Distributed Systems" },
+      { title: "Microservices" },
+      { title: "Scalable Architecture" },
+      { title: "Performance Optimization" },
+      { title: "Database Optimization" }
+    ],
+  },
+  {
+    section: "Caching & Queues",
+    skills: [
+      { title: "Redis" },
+      { title: "Bull Queue" },
+      { title: "Background Jobs" },
+      { title: "Queue-Based Processing" },
+      { title: "Event-Driven Architecture" }
+    ],
+  },
+  {
+    section: "Cloud & Integrations",
+    skills: [
+      { title: "AWS S3" },
+      { title: "WhatsApp Business API" },
+      { title: "Zoho CRM" },
+      { title: "Cashfree" }
     ],
   },
   {
     section: "Databases",
-    skills: [{ title: "Mongo DB", image: mongoDB }],
+    skills: [
+      { title: "MongoDB" },
+      { title: "MySQL" },
+      { title: "Qdrant Vector Database" }
+    ],
   },
   {
-    section: "Development Tools",
+    section: "Languages",
     skills: [
-      { title: "Postman", image: Postman },
-      { title: "Github", image: Github },
-      { title: "GitLab", image: GitLab },
-      { title: "Prompt Engineering", image: PromptEngineering }
+      { title: "JavaScript" },
+      { title: "TypeScript" },
+      { title: "Python" }
+    ],
+  },
+  {
+    section: "Frontend",
+    skills: [
+      { title: "React.js" },
+      { title: "Next.js" }
     ],
   }
 ];

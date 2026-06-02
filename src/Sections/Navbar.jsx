@@ -17,7 +17,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FaCogs,
   FaDesktop,
@@ -30,7 +30,8 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 import robotGif from "./robotGif.gif";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+import { GithubLink, LinkedLink, ResumeDriveLink, ResumeFileName } from "../constants";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -47,30 +48,22 @@ const Navbar = () => {
 
   //Linkedin
   const handleLinkedin = () => {
-    window.open(
-      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
-      "_blank"
-    );
+    window.open(LinkedLink,"_blank");
   };
 
   //handleGithub
   const handleGithub = () => {
-    window.open("https://github.com/shatrukumar47", "_blank");
+    window.open(GithubLink, "_blank");
   };
 
   //handleResumeDownload
   const handleResume = () => {
-    const resumeFilename = "Shatrughan-Kumar-Resume.pdf"; // Make sure this matches the filename in the public folder
-    const resumeURL =
-      process.env.PUBLIC_URL + "/Resume/" + "Shatrughan-Kumar-Resume.pdf";
+    const resumeURL = process.env.PUBLIC_URL + `/Resume/${ResumeFileName}`;
     const link = document.createElement("a");
     link.href = resumeURL;
-    link.download = resumeFilename;
+    link.download = ResumeFileName;
     link.click();
-    window.open(
-      "https://drive.google.com/file/d/1YsBoZgyYwhxL6HTriDpz-cVPs2G_ah_m/view",
-      "_blank"
-    );
+    window.open(ResumeDriveLink,"_blank");
   };
 
   return (

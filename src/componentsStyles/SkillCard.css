@@ -37,7 +37,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 15px;
   padding: 10px 20px 10px 20px;
   z-index: 2;
@@ -55,5 +55,5 @@
 
 .skillcard-container .skillcard-content > p {
   color: white;
-  text-align: left;
+  text-align: center;
 }

@@ -56,12 +56,7 @@ const About = () => {
                     color={"white"}
                     textAlign={"justify"}
                   >
-                    As an outcome-driven Full Stack Web Developer, I bring my
-                    expertise in both Frontend & Backend, acquired through
-                    rigorous training at Masai School. With a portfolio
-                    showcasing successful web applications and some major and
-                    minor projects, I have developed strong teamwork and
-                    communication skills.
+                  Software Development Engineer II (SDE-2) with 2.5+ years of experience building scalable backend systems, AI-powered applications, and distributed processing platforms using NestJS, Node.js, MongoDB, Redis, Next.js, and TypeScript.
                   </Text>
                 </HStack>
               </div>
@@ -76,12 +71,22 @@ const About = () => {
                     <FaReact color="#C651CD" fontSize={"20px"} />
                   </Box>
                   <Text color={"white"} textAlign={"justify"}>
-                    Now, I am enthusiastic about applying my talents in a Full
-                    Stack Web Developer role, contributing to cutting-edge
-                    projects and creating user-friendly solutions. Let's
-                    collaborate to build exceptional web experiences and drive
-                    innovation in the digital realm.
+                   Currently leading development initiatives for large-scale educational platforms serving 50,000+ users, with experience in system design, vector search, AI integrations, performance optimization, event-driven architectures, and cloud-based solutions. Passionate about building reliable, scalable products that solve real-world problems through modern software engineering practices.
                   </Text>
+                </HStack>
+              </div>
+
+              <div data-aos="fade-up">
+                <HStack
+                  alignItems={"flex-start"}
+                  justifyContent={"flex-start"}
+                  spacing={"10px"}
+                >
+                  <Box marginTop={"5px"}>
+                    <FaReact color="#C651CD" fontSize={"20px"} />
+                  </Box>
+                  <Text color={"white"} textAlign={"justify"}>
+I am passionate about solving complex engineering challenges, building scalable products, and leveraging modern technologies such as AI, vector search, distributed processing, and system design principles to create impactful user experiences.                  </Text>
                 </HStack>
               </div>
             </VStack>

@@ -1,5 +1,4 @@
 import { Box, Container, HStack, Heading } from "@chakra-ui/react";
-import React from "react";
 import { techSkills } from "../data/skillsData";
 import SkillSections from "../components/SkillSections";
 

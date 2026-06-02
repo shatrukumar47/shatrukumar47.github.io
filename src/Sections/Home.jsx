@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   HStack,
@@ -10,18 +9,19 @@ import {
   Text,
 } from "@chakra-ui/react";
 import portfolioPic from "../assets/PortfolioPic/2.png";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { FaDownload, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
+import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import ResumeButton from "../components/ResumeButton";
+import { GithubLink, LinkedLink, ResumeDriveLink, ResumeFileName } from "../constants";
 
 const Home = () => {
   const typedRef = useRef(null);
 
   useEffect(() => {
     const options = {
-      strings: ["Hello, World.", "I'm a Full Stack Web Developer."],
+      strings: ["Hello, World.", "I'm a Software Development Engineer II"],
       typeSpeed: 50,
       backSpeed: 40,
       cursorChar: "|",
@@ -37,15 +37,12 @@ const Home = () => {
 
   //Linkedin
   const handleLinkedin = () => {
-    window.open(
-      "https://www.linkedin.com/in/shatrughan-kumar-32236625a/",
-      "_blank"
-    );
+    window.open(LinkedLink,"_blank");
   };
 
   //handleGithub
   const handleGithub = () => {
-    window.open("https://github.com/shatrukumar47", "_blank");
+    window.open(GithubLink, "_blank");
   };
 
   //handleEmail
@@ -57,17 +54,12 @@ const Home = () => {
 
   //handleResume
   const handleResume = () => {
-    const resumeFilename = "Shatrughan-Kumar-Resume.pdf"; // Make sure this matches the filename in the public folder
-    const resumeURL =
-      process.env.PUBLIC_URL + "/Resume/Shatrughan-Kumar-Resume.pdf";
+    const resumeURL = process.env.PUBLIC_URL + `/Resume/${ResumeFileName}`;
     const link = document.createElement("a");
     link.href = resumeURL;
-    link.download = resumeFilename;
+    link.download = ResumeFileName;
     link.click();
-    window.open(
-      "https://drive.google.com/file/d/1YsBoZgyYwhxL6HTriDpz-cVPs2G_ah_m/view",
-      "_blank"
-    );
+    window.open(ResumeDriveLink,"_blank");
   };
 
   return (
@@ -116,25 +108,28 @@ const Home = () => {
               </Text>
             </Heading>
             <Text id="user-detail-intro" color={"white"} fontSize={"lg"}>
-              Results-driven{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                Full Stack Web Developer
+                Software Development Engineer II (SDE-2) 
               </span>{" "}
-              with proficiency in{" "}
+              with{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                MERN{" "}
+                2.5+ years of experience{" "}
               </span>
-              stack. Swiftly embraces{" "}
+              building scalable backend systems, AI-powered search platforms, and distributed processing solutions. Led a team of 2–3 developers while delivering large-
+              scale educational platforms serving{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                Generative AI
-              </span>{" "}
-              and quickly learns new tech stacks. Completed{" "}
+                50,000+{" "}
+              </span>
+              users, processing{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                1200+
+                100,000+
               </span>{" "}
-              hour web development course at Masai School. Committed to
-              delivering exceptional web solutions and collaborating effectively
-              within teams.
+                document workflows, and managing{" "}
+                <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                400+ GB{" "}
+              </span>{" "}
+              of operational data. Experienced in system design, event-driven architecture, performance optimization, vector search,
+              and cloud-based integrations.
             </Text>
             <Stack alignItems={"center"}>
               <HStack
