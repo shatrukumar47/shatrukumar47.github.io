@@ -109,27 +109,25 @@ const Home = () => {
             </Heading>
             <Text id="user-detail-intro" color={"white"} fontSize={"lg"}>
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                Software Development Engineer II (SDE-2) 
+                SDE-2
               </span>{" "}
               with{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                2.5+ years of experience{" "}
+                3 years of experience{" "}
               </span>
-              building scalable backend systems, AI-powered search platforms, and distributed processing solutions. Led a team of 2–3 developers while delivering large-
-              scale educational platforms serving{" "}
+              building scalable microservices, AI-driven platforms, and event-driven architectures. Proven track record of leading developer teams and delivering distributed systems that handle burst traffic of up to{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                50,000+{" "}
+                250,000+{" "}
               </span>
-              users, processing{" "}
+              users, manage{" "}
+              <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
+                400+ GB{" "}
+              </span>{" "}
+              of operational data, and orchestrate{" "}
               <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
                 100,000+
               </span>{" "}
-                document workflows, and managing{" "}
-                <span style={{ fontWeight: "bold", color: "rgb(247,67,67)" }}>
-                400+ GB{" "}
-              </span>{" "}
-              of operational data. Experienced in system design, event-driven architecture, performance optimization, vector search,
-              and cloud-based integrations.
+              asynchronous document workflows. Deeply experienced in high-level system design, multi-LLM integrations, vector search, and comprehensive backend performance optimization.
             </Text>
             <Stack alignItems={"center"}>
               <HStack

@@ -56,7 +56,7 @@ const About = () => {
                     color={"white"}
                     textAlign={"justify"}
                   >
-                  Software Development Engineer II (SDE-2) with 2.5+ years of experience building scalable backend systems, AI-powered applications, and distributed processing platforms using NestJS, Node.js, MongoDB, Redis, Next.js, and TypeScript.
+                  Software Development Engineer II with 3 years of experience building scalable microservices, AI-driven platforms, and event-driven architectures.
                   </Text>
                 </HStack>
               </div>
@@ -71,7 +71,7 @@ const About = () => {
                     <FaReact color="#C651CD" fontSize={"20px"} />
                   </Box>
                   <Text color={"white"} textAlign={"justify"}>
-                   Currently leading development initiatives for large-scale educational platforms serving 50,000+ users, with experience in system design, vector search, AI integrations, performance optimization, event-driven architectures, and cloud-based solutions. Passionate about building reliable, scalable products that solve real-world problems through modern software engineering practices.
+                   Proven track record of leading developer teams and delivering distributed systems that handle burst traffic of up to 250,000+ users, manage 400+ GB of operational data, and orchestrate 100,000+ asynchronous document workflows.
                   </Text>
                 </HStack>
               </div>
@@ -86,7 +86,8 @@ const About = () => {
                     <FaReact color="#C651CD" fontSize={"20px"} />
                   </Box>
                   <Text color={"white"} textAlign={"justify"}>
-I am passionate about solving complex engineering challenges, building scalable products, and leveraging modern technologies such as AI, vector search, distributed processing, and system design principles to create impactful user experiences.                  </Text>
+                   Deeply experienced in high-level system design, multi-LLM integrations, vector search, and comprehensive backend performance optimization.
+                  </Text>
                 </HStack>
               </div>
             </VStack>

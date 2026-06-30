@@ -1,14 +1,35 @@
 export const techSkills = [
   {
+    section: "Cloud & Integrations",
+    skills: [
+      { title: "AWS S3" },
+      { title: "AWS Lambda" },
+      { title: "AWS EC2" },
+      { title: "Azure" },
+      { title: "WhatsApp Business API" },
+      { title: "Zoho CRM" },
+      { title: "Cashfree" },
+      { title: "Git" },
+      { title: "Docker" },
+      { title: "CI/CD Pipeline" },
+      { title: "Ngnix" },
+      { title: "Third-Party API Integrations" },
+    ],
+  },
+  {
     section: "Backend",
     skills: [
       { title: "Node.js" },
       { title: "NestJS" },
+      { title: "Express.js" },
+      { title: "Fast API" },
+      { title: "Flask" },
       { title: "REST APIs" },
       { title: "JWT" },
       { title: "Passport" },
       { title: "RBAC" },
-      { title: "Socket.IO" }
+      { title: "Socket.IO" },
+      { title: "OAuth2" },
     ],
   },
   {
@@ -16,10 +37,15 @@ export const techSkills = [
     skills: [
       { title: "OpenAI APIs" },
       { title: "Large Language Models (LLMs)" },
+      { title: "MCP Server" },
       { title: "Vector Embeddings" },
-      { title: "Semantic Search" },
       { title: "Retrieval Systems" },
-      { title: "Elasticsearch" }
+      { title: "Semantic Search" },
+      { title: "Vector Search" },
+      { title: "Elasticsearch" },
+      { title: "Prompt Engineering" },
+      { title: "Generative AI" },
+      { title: "AI Agents" },
     ],
   },
   {
@@ -30,7 +56,8 @@ export const techSkills = [
       { title: "Microservices" },
       { title: "Scalable Architecture" },
       { title: "Performance Optimization" },
-      { title: "Database Optimization" }
+      { title: "Database Optimization" },
+      { title: "API Design" }
     ],
   },
   {
@@ -40,16 +67,17 @@ export const techSkills = [
       { title: "Bull Queue" },
       { title: "Background Jobs" },
       { title: "Queue-Based Processing" },
-      { title: "Event-Driven Architecture" }
+      { title: "Event-Driven Architecture" },
+      { title: "Pub/Sub" }
     ],
   },
   {
-    section: "Cloud & Integrations",
+    section: "Frontend",
     skills: [
-      { title: "AWS S3" },
-      { title: "WhatsApp Business API" },
-      { title: "Zoho CRM" },
-      { title: "Cashfree" }
+      { title: "React.js" },
+      { title: "Next.js" },
+      { title: "Redux" },
+      { title: "Tanstack Query" },
     ],
   },
   {
@@ -66,13 +94,6 @@ export const techSkills = [
       { title: "JavaScript" },
       { title: "TypeScript" },
       { title: "Python" }
-    ],
-  },
-  {
-    section: "Frontend",
-    skills: [
-      { title: "React.js" },
-      { title: "Next.js" }
     ],
   }
 ];
