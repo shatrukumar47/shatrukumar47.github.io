@@ -3,6 +3,7 @@ import Navbar from "./Sections/Navbar";
 import Home from "./Sections/Home";
 import About from "./Sections/About";
 import Skills from "./Sections/Skills";
+import WorkExperience from "./Sections/WorkExperience";
 import Projects from "./Sections/Projects";
 import Contact from "./Sections/Contact";
 import GithubOverview from "./Sections/GithubOverview";
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <WorkExperience />
       <Projects />
       <GithubOverview />
       <Contact />

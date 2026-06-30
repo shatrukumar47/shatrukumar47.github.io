@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import {
+  FaBriefcase,
   FaCogs,
   FaDesktop,
   FaDownload,
@@ -147,6 +148,18 @@ const Navbar = () => {
             <Link
               activeClass={"active"}
               spy={true}
+              to="experience"
+              smooth={true}
+              offset={-100}
+              delay={0}
+              duration={0}
+              className="nav-link home"
+            >
+              Experience
+            </Link>
+            <Link
+              activeClass={"active"}
+              spy={true}
               to="projects"
               smooth={true}
               offset={-100}
@@ -255,6 +268,22 @@ const Navbar = () => {
                       onClick={() => onClose()}
                     >
                       Skills
+                    </Link>
+                  </HStack>
+                  <HStack spacing={"20px"}>
+                    <FaBriefcase color="#00FFFF" />
+                    <Link
+                      activeClass={"active"}
+                      spy={true}
+                      to="experience"
+                      smooth={true}
+                      offset={-100}
+                      delay={0}
+                      duration={0}
+                      className="nav-link home"
+                      onClick={() => onClose()}
+                    >
+                      Experience
                     </Link>
                   </HStack>
                   <HStack spacing={"20px"}>

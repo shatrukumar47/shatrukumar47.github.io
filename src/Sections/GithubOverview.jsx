@@ -5,7 +5,7 @@ import GitHubCalendar from "react-github-calendar";
 const GithubOverview = () => {
   return (
     <Box
-      bg={"#0F1624"}
+      bg={"#1E1842"}
       // padding={"0px 0px 0px 0px"}
     >
       <div data-aos="fade-up">
