@@ -1,13 +1,17 @@
-import { Box, Text, VStack, HStack, Heading, UnorderedList, ListItem, Divider, Wrap, WrapItem, Spacer, Flex } from "@chakra-ui/react";
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Box, Text, VStack, HStack, Heading, UnorderedList, ListItem, Divider, Wrap, WrapItem, Spacer, Flex, Collapse, Button } from "@chakra-ui/react";
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useState } from "react";
 
 const ExperienceCard = ({ experience }) => {
+  const [show, setShow] = useState(false);
+  const handleToggle = () => setShow(!show);
   return (
     <Box
       bg={"rgba(255, 255, 255, 0.04)"}
       borderRadius={"14px"}
       p={{ base: "20px", md: "28px" }}
       w={"100%"}
+      h={"100%"}
       boxShadow={"0 4px 24px rgba(0, 0, 0, 0.12)"}
       backdropFilter={"blur(6px)"}
       border={"1px solid rgba(255, 255, 255, 0.08)"}
@@ -46,7 +50,8 @@ const ExperienceCard = ({ experience }) => {
 
         <Divider borderColor={"rgba(255, 255, 255, 0.08)"} />
 
-        <VStack align={"flex-start"} spacing={5} w={"100%"}>
+        <Collapse startingHeight={140} in={show} style={{ width: "100%" }}>
+          <VStack align={"flex-start"} spacing={5} w={"100%"}>
           {experience.projects.map((project, idx) => (
             <Box key={idx} w={"100%"}>
               <Heading size={"xs"} textAlign={"left"} color={"white"} fontWeight={600} mb={4}>
@@ -79,7 +84,22 @@ const ExperienceCard = ({ experience }) => {
               </UnorderedList>
             </Box>
           ))}
-        </VStack>
+          </VStack>
+        </Collapse>
+
+        <Flex w="100%" justify="center" mt={2}>
+          <Button
+            onClick={handleToggle}
+            variant="ghost"
+            size="sm"
+            color="#C651CD"
+            rightIcon={show ? <FaChevronUp /> : <FaChevronDown />}
+            _hover={{ bg: "rgba(198, 81, 205, 0.1)" }}
+            _active={{ bg: "rgba(198, 81, 205, 0.2)" }}
+          >
+            {show ? "View Less" : "View More"}
+          </Button>
+        </Flex>
       </VStack>
     </Box>
   );

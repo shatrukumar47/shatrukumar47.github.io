@@ -1,8 +1,13 @@
-import { Box, Container, HStack, Heading } from "@chakra-ui/react";
+import { useState } from "react";
+import { Box, Container, HStack, Heading, Collapse, Flex, Button } from "@chakra-ui/react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { techSkills } from "../data/skillsData";
 import SkillSections from "../components/SkillSections";
 
 const Skills = () => {
+  const [show, setShow] = useState(false);
+  const handleToggle = () => setShow(!show);
+
   return (
     <Box id="skills" bg={"#0F1624"}>
       <div data-aos="fade-up">
@@ -14,20 +19,52 @@ const Skills = () => {
             Skills
           </Heading>
         </HStack>
-        <Container
-          display={"grid"}
-          gridTemplateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2,1fr)",
-            lg: "repeat(5, 1fr)",
-          }}
-          gap={"20px"}
-          maxW={"95%"}
-        >
-          {techSkills?.map((item, index) => {
-            return <SkillSections key={index} item={item} />;
-          })}
-        </Container>
+        <Box position="relative">
+          <Collapse startingHeight={400} in={show}>
+            <Container
+              display={"grid"}
+              gridTemplateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2,1fr)",
+                lg: "repeat(5, 1fr)",
+              }}
+              gap={"20px"}
+              maxW={"95%"}
+              pb={show ? "20px" : "0"}
+            >
+              {techSkills.map((item, index) => {
+                return <SkillSections key={index} item={item} />;
+              })}
+            </Container>
+          </Collapse>
+
+          {/* Fade-out gradient when collapsed */}
+          {!show && (
+            <Box
+              position="absolute"
+              bottom="0"
+              left="0"
+              right="0"
+              height="100px"
+              bgGradient="linear(to-t, #0F1624 20%, transparent)"
+              pointerEvents="none"
+            />
+          )}
+        </Box>
+
+        <Flex w="100%" justify="center" mt={4}>
+          <Button
+            onClick={handleToggle}
+            variant="ghost"
+            size="md"
+            color="#C651CD"
+            rightIcon={show ? <FaChevronUp /> : <FaChevronDown />}
+            _hover={{ bg: "rgba(198, 81, 205, 0.1)" }}
+            _active={{ bg: "rgba(198, 81, 205, 0.2)" }}
+          >
+            {show ? "View Less" : "View More"}
+          </Button>
+        </Flex>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#1E1842"

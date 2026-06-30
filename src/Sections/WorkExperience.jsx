@@ -16,10 +16,10 @@ const WorkExperience = () => {
           </Heading>
         </HStack>
         <Container
-          maxW={{ base: "100%", md: "90%", lg: "80%" }}
+          maxW={{ base: "100%", md: "90%", lg: "95%" }} // give it a bit more width so row isn't too squished
           display={"flex"}
           flexDirection={{ base: "column", md: "column", lg: "row" }}
-          alignItems={"start"}
+          alignItems={"stretch"}
           gap={"40px"}
         >
           {experienceData?.map((item, index) => {
