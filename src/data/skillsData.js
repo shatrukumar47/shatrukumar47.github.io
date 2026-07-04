@@ -68,7 +68,8 @@ export const techSkills = [
       { title: "Background Jobs" },
       { title: "Queue-Based Processing" },
       { title: "Event-Driven Architecture" },
-      { title: "Pub/Sub" }
+      { title: "Pub/Sub" },
+      { title: "Kafka" }
     ],
   },
   {
@@ -78,6 +79,8 @@ export const techSkills = [
       { title: "Next.js" },
       { title: "Redux" },
       { title: "Tanstack Query" },
+      { title: "Vue.js" },
+      { title: "AngularJS" }
     ],
   },
   {
@@ -85,7 +88,9 @@ export const techSkills = [
     skills: [
       { title: "MongoDB" },
       { title: "MySQL" },
-      { title: "Qdrant Vector Database" }
+      { title: "Qdrant Vector Database" },
+      { title: "PostgreSQL" },
+      { title: "DynamoDB" }
     ],
   },
   {
